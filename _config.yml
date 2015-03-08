@@ -1,4 +1,17 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+#Site settings
+title: Jeremy Tinianow
+email: hello@jtinianow.com
+description: > # this means to ignore newlines until "baseurl:"
+  Jeremy Tinianow is a cross-disciplinary designer with a focus on bridging the gap between digital and physical.
+baseurl: "http://hello.jtinianow.com" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+paginate: 5
+
+# Dependencies
+markdown: kramdown
+pygments: true
+
+# Permalinks
+permalink: pretty
