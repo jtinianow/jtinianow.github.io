@@ -225,7 +225,7 @@ body {
 }
 .post-nav__link--prev{margin-left: 0;}
 .post-nav__link--next{margin-right: 0;}
-.post-nav__archive{width: 65%;text-align: center;}
+.post-nav__archive{width: 70%;text-align: center;}
 .post-nav__link--inactive{color: lighten($text-color, 60%);}
 
 // Homepage
@@ -323,6 +323,7 @@ body {
 .post-previews__header {
 	margin-bottom: $spacing-unit;
 	font-family: $secondary-font-family;
+	font-weight: 300;
 	color: $blue;
 }
 .post-preview__list {

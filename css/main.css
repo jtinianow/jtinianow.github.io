@@ -406,7 +406,7 @@ body {
   margin-right: 0; }
 
 .post-nav__archive {
-  width: 65%;
+  width: 70%;
   text-align: center; }
 
 .post-nav__link--inactive {
@@ -531,6 +531,7 @@ body {
 .post-previews__header {
   margin-bottom: 2rem;
   font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
   color: #00aef1; }
 
 .post-preview__list {
