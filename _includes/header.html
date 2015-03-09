@@ -1,9 +1,16 @@
-<div class="site-header__wrapper">
-	<header class="site-header">
-		<a href="/" class="site-header__title-link">{{ site.title }}</a>
-		<a class="nav-primary__menu-toggle" id="menu-toggle">Menu</a>
+<div class="site-header__container">
+	<header class="wrapper site-header">
+		<a href="/" class="site-header__title-link"><img src="/content/oroburous_02.png" alt="" width="24" height="24"/></a>
+		<a class="nav-primary__menu-toggle" id="menu-toggle">
+			<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			width="40px" height="24px" viewBox="-425 589 30 24" enable-background="new -425 589 30 24" xml:space="preserve">
+				<rect x="-425" y="596.5" width="40" height="1"/>
+				<rect x="-425" y="600.5" width="40" height="1"/>
+				<rect x="-425" y="604.5" width="40" height="1"/>
+			</svg>
+		</a>
 	</header>
-	<div class="nav-primary__wrapper">
-		{% include nav-primary.html %}
-	</div>
+</div>
+<div class="nav-primary__container">
+	{% include nav-primary.html %}
 </div>

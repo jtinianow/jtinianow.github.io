@@ -1,0 +1,17 @@
+<div class="wrapper post-nav">
+	<div class="post-nav__links">
+		{% if page.previous %} 
+		<a class="post-nav__link post-nav__link--prev" href="{{ page.previous.url }}"><i class="fa fa-angle-left fa-2x"></i></a>
+		{% else %}
+		<span class="post-nav__link post-nav__link--prev post-nav__link--inactive"><i class="fa fa-angle-left fa-2x"></i></span>
+		{% endif %}
+		<div class="post-nav__link post-nav__archive">
+	  	<a class="post-nav--project__link" href="/#work">More Projects</a>
+		</div>
+		{% if page.next %} 
+		<a class="post-nav__link post-nav__link--next" href="{{ page.next.url }}"><i class="fa fa-angle-right fa-2x"></i></a>
+		{% else %}
+		<span class="post-nav__link post-nav__link--next post-nav__link--inactive"><i class="fa fa-angle-right fa-2x"></i></span>
+		{% endif %}
+	</div>
+  </div>
