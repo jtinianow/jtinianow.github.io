@@ -228,7 +228,8 @@ body {
     margin-right: 0%; } }
 
 .site-footer__info {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  line-height: 125%; }
 
 .nav-primary__menu-toggle {
   float: right; }
@@ -547,7 +548,8 @@ body {
   -webkit-transform: translateZ(0) scale(1, 1); }
 
 .post-preview__link {
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
 
 @media (min-width: 768px) {
   .post-preview__link:hover .post-preview__info, .post-preview__link:hover .post-preview__thumb {

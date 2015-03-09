@@ -79,6 +79,7 @@ body {
 }
 .site-footer__info {
 	font-size: 0.8em;
+	line-height: 125%;
 }
 
 // Primary Nav
@@ -338,7 +339,7 @@ body {
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
-.post-preview__link {display: inline-block;}
+.post-preview__link {display: inline-block; width: 100%;}
 .post-preview__link:hover{
 	
 	@media (min-width: 768px) {
