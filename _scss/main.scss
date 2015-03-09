@@ -229,7 +229,7 @@ body {
 .post-nav__link--inactive{color: lighten($text-color, 60%);}
 
 // Homepage
-.home-page{padding-top: $spacing-unit*3;}
+.home-page, .resume{padding-top: $spacing-unit*3;}
 .post-previews{list-style: none;}
 .post-preview__list {
 	display: block;
@@ -366,3 +366,47 @@ body {
 }
 .post-preview__title{color: $blue;}
 .post-preview__client{color: lighten($text-color, 10%);}
+
+// Resume
+.resume {
+	line-height: 1.45;
+	max-width: $text-width;
+
+	@media (min-width: 960px) {
+		margin: 0 auto;
+	}
+}
+.resume__download-link, .resume__download-link:visited{
+	display: inline-block;
+	margin-bottom: $spacing-unit;
+	border: 2px solid $blue;
+	padding: $spacing-unit/4 $spacing-unit/2;
+	line-height: 1.5;
+	vertical-align: baseline;
+	font-family: $secondary-font-family;
+	font-size: 0.6em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: $blue;
+}
+.resume__download-link:hover{background-color: lighten($blue, 50%);}
+.resume-section__container {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: $spacing-unit*1.75;
+}
+.resume__header {margin-bottom: 0;}
+.resume__info, .resume__contact {
+	@include span(1/2);
+}
+.resume__contact{text-align: right;}
+.resume-section__header {
+	margin-bottom: $spacing-unit/2;
+	font-family: $secondary-font-family;
+	font-weight: 300;
+	color: $blue;
+}
+.resume__list-secondary{margin-bottom: $spacing-unit/1.5;}
+.resume__list-primary__subhead{color: darken($text-color, 50%);}
+.resume__list-secondary__item{color: lighten($text-color, 5%);}
+.resume__item--em{font-style: italic;}

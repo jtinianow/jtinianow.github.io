@@ -412,7 +412,7 @@ body {
 .post-nav__link--inactive {
   color: #dddddd; }
 
-.home-page {
+.home-page, .resume {
   padding-top: 6rem; }
 
 .post-previews {
@@ -576,3 +576,62 @@ body {
 
 .post-preview__client {
   color: #5e5e5e; }
+
+.resume {
+  line-height: 1.45;
+  max-width: 40rem; }
+  @media (min-width: 960px) {
+    .resume {
+      margin: 0 auto; } }
+
+.resume__download-link, .resume__download-link:visited {
+  display: inline-block;
+  margin-bottom: 2rem;
+  border: 2px solid #00aef1;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  vertical-align: baseline;
+  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00aef1; }
+
+.resume__download-link:hover {
+  background-color: #f1fbff; }
+
+.resume-section__container {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 3.5rem; }
+
+.resume__header {
+  margin-bottom: 0; }
+
+.resume__info, .resume__contact {
+  float: left;
+  clear: none;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%; }
+
+.resume__contact {
+  text-align: right; }
+
+.resume-section__header {
+  margin-bottom: 1rem;
+  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #00aef1; }
+
+.resume__list-secondary {
+  margin-bottom: 1.33333rem; }
+
+.resume__list-primary__subhead {
+  color: black; }
+
+.resume__list-secondary__item {
+  color: #515151; }
+
+.resume__item--em {
+  font-style: italic; }
