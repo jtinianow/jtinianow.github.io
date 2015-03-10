@@ -26,13 +26,13 @@ background: "#D6D0BA"
 	</div>
 </section>
 
-<section class="post-section omega">
+<section class="wrapper post-section omega">
 	<img src="/content/make-puzzle/make-puzzle-front-rough.jpg" alt="">
 	<p class="caption">First draft of the front.</p>
 	<p>The initial design was a bit too fussy. The following draft was simplified to communicate more concisely.</p>
 </section>
 
-<section class="post-section">
+<section class="wrapper post-section">
 	<img src="/content/make-puzzle/make-puzzle-front.jpg" alt="">
 	<img src="/content/make-puzzle/make-puzzle-back.jpg" alt="">
 	<p class="caption">The final printed promotion.</p>

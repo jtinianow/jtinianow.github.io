@@ -185,6 +185,12 @@ body {
     body {
       font-size: 21px; } }
 
+.wf-inactive body {
+  font-size: 13.65px; }
+  @media (min-width: 768px) {
+    .wf-inactive body {
+      font-size: 17.85px; } }
+
 .wrapper {
   margin: 0 1rem;
   *zoom: 1; }
@@ -261,6 +267,10 @@ body {
   margin-right: 0%;
   float: right; }
 
+@media (min-width: 800px) {
+  .nav-primary {
+    margin-right: 3rem; } }
+
 .alpha {
   margin-left: 10%; }
 
@@ -273,9 +283,18 @@ body {
 
 .menu-link {
   display: inline-block;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300;
-  padding: 0.5rem 0; }
+  padding: 0.5rem;
+  transition: all 0.3s ease; }
+  @media (min-width: 800px) {
+    .menu-link {
+      padding: 0.5rem 1rem; } }
+
+@media (min-width: 800px) {
+  .menu-link:hover {
+    background: #00aef1;
+    color: #fff; } }
 
 .menu-link--header {
   font-weight: 400; }
@@ -326,14 +345,14 @@ body {
       padding-bottom: 20rem; } }
 
 .post-header__title {
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 3em;
   margin-bottom: 6rem;
   line-height: 110%; }
 
-.post-header__client, .post-header__tags {
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+.post-header__client {
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
 .post-brief {
@@ -349,7 +368,7 @@ body {
         clear: both; } }
 
 .post-brief__header, .post-header__label {
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 70%;
   text-transform: uppercase;
@@ -362,22 +381,20 @@ body {
       margin-left: 0%;
       margin-right: 0%; } }
 
-.post-brief__description, .post-header__tags {
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 300; }
-  @media (min-width: 768px) {
-    .post-brief__description, .post-header__tags {
-      float: left;
-      clear: none;
-      width: 80%;
-      margin-left: 0%;
-      margin-right: 0%; } }
+@media (min-width: 768px) {
+  .post-brief__description, .post-header__tags {
+    float: left;
+    clear: none;
+    width: 80%;
+    margin-left: 0%;
+    margin-right: 0%; } }
 
 .post-header__details {
   margin-bottom: 0; }
 
 .caption {
   font-size: 80%;
+  line-height: 120%;
   font-style: italic;
   color: #aaaaaa;
   text-align: center; }
@@ -387,7 +404,7 @@ body {
 
 .post-subhead {
   margin: 2rem 0 1rem 0;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #ea2e49; }
 
 .post-nav__links {
@@ -408,9 +425,6 @@ body {
 .post-nav__archive {
   width: 70%;
   text-align: center; }
-
-.post-nav__link--inactive {
-  color: #dddddd; }
 
 .home-page, .resume {
   padding-top: 6rem; }
@@ -474,20 +488,24 @@ body {
 
 .about__label {
   margin-bottom: 1rem;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
   color: #00aef1; }
 
 .about__contact-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
-  border: 2px solid #00aef1; }
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 2px solid #00aef1;
+  transition: background 0.3s ease; }
 
-.about__highlights {
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 300; }
+@media (min-width: 800px) {
+  .about__contact-link:hover {
+    background: #beeeff; } }
 
 .highlight__container--col {
   float: left;
@@ -507,14 +525,13 @@ body {
 
 .highlight__header {
   margin-bottom: 0.5rem;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #00aef1;
-  font-weight: 300; }
+  font-weight: 400;
+  text-transform: uppercase; }
   @media (min-width: 768px) {
     .highlight__header {
       margin-bottom: 1rem; } }
-
-.highlight__list {
-  font-size: 0.8em; }
 
 .highlight__container {
   margin-bottom: 2rem; }
@@ -522,16 +539,31 @@ body {
 .highlight__details {
   margin-bottom: 0.66667rem; }
 
+.highlight__list {
+  font-size: 0.8em; }
+
 .highlight__item {
+  font-size: 1em;
   line-height: 135%; }
 
+.highlight__item a {
+  transition: background 0.3s ease; }
+
+@media (min-width: 800px) {
+  .highlight__item a:hover {
+    background: #dedede; } }
+
 .highlight__subhead {
-  font-weight: 400; }
+  font-weight: 300; }
+
+.highlight__snippet {
+  color: #5e5e5e; }
 
 .post-previews__header {
   margin-bottom: 2rem;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
   color: #00aef1; }
 
 .post-preview__list {
@@ -564,7 +596,8 @@ body {
   opacity: 0;
   margin: 1rem;
   text-align: center;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
   font-size: 0.8em;
   line-height: 120%; }
 
@@ -572,7 +605,8 @@ body {
   margin-bottom: 0.5rem; }
 
 .post-preview__title {
-  color: #00aef1; }
+  color: #00aef1;
+  letter-spacing: 1px; }
 
 .post-preview__client {
   color: #5e5e5e; }
@@ -591,22 +625,31 @@ body {
   padding: 0.5rem 1rem;
   line-height: 1.5;
   vertical-align: baseline;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.6em;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #00aef1; }
+  color: #00aef1;
+  transition: background 0.3s ease; }
 
 .resume__download-link:hover {
-  background-color: #f1fbff; }
+  background-color: #e7f9ff; }
 
 .resume-section__container {
   display: inline-block;
   width: 100%;
   margin-bottom: 3.5rem; }
 
+.resume__header, .resume__subhead {
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-transform: uppercase; }
+
 .resume__header {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: #ea2e49; }
 
 .resume__info, .resume__contact {
   float: left;
@@ -620,9 +663,11 @@ body {
 
 .resume-section__header {
   margin-bottom: 1rem;
-  font-family: "nudista-web", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
   font-weight: 300;
-  color: #00aef1; }
+  text-transform: uppercase;
+  color: #ea2e49; }
 
 .resume__list-secondary {
   margin-bottom: 1.33333rem; }
