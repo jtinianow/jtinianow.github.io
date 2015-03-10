@@ -451,6 +451,30 @@ body {
   width: 70%;
   text-align: center; }
 
+.post-nav__link--prev svg {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  transition-duration: 0.3s; }
+
+.post-nav__link--next svg {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  transition-duration: 0.3s; }
+
+.post-nav__link--prev:hover svg {
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+  transition-duration: 0.3s; }
+
+.post-nav__link--next:hover svg {
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
+  transition-duration: 0.3s; }
+
 .home-page, .resume {
   padding-top: 6rem; }
 

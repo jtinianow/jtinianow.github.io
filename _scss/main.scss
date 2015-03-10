@@ -265,6 +265,10 @@ body {
 .post-nav__link--prev {margin-left: 0;}
 .post-nav__link--next {margin-right: 0;}
 .post-nav__archive{width: 70%;text-align: center;}
+.post-nav__link--prev svg{transform: translateX(0); transition-duration: 0.3s;}
+.post-nav__link--next svg{transform: translateX(0); transition-duration: 0.3s;}
+.post-nav__link--prev:hover svg{transform: translateX(5px); transition-duration: 0.3s;}
+.post-nav__link--next:hover svg{transform: translateX(-5px); transition-duration: 0.3s;}
 
 // Homepage
 .home-page, .resume{padding-top: $spacing-unit*3;}
