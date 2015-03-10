@@ -19,6 +19,18 @@ $grey-color: #828282;
 $max-width: 65rem;
 $text-width: 40rem;
 
+// Mixins
+@mixin secondary-font($size) {
+	font-family: $secondary-font-family;
+	font-size: $size;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	@media (min-width: 768px) {
+	}
+}
+
 body {
 	font-family: $base-font-family;
 	font-size: $base-font-size * 0.8;
@@ -33,6 +45,9 @@ body {
     @media (min-width: 768px) {
     	font-size: $base-font-size;
     }
+}
+.wf-loading {
+	h1, h2, h3, h4, h5, h6, ul, ol, p, span {visibility: hidden;}
 }
 .wf-inactive body{
 	font-size: $base-font-size * 0.65;
@@ -126,14 +141,18 @@ body {
 }
 .menu-link{
 	display: inline-block;
-	font-family: $secondary-font-family;
-	font-weight: 300;
+	@include secondary-font(1em);
 	padding: $spacing-unit/4;
 	transition: all 0.3s ease;
 
 	@media (min-width: 800px) {
 		padding: $spacing-unit/4 $spacing-unit/2;
 	}
+}
+.menu-link--page{
+	font-weight: 300;
+	text-transform: none;
+	letter-spacing: 0;
 }
 .menu-link:hover{
 
@@ -142,7 +161,6 @@ body {
 		color: #fff;
 	}
 }
-.menu-link--header{font-weight: 400;}
 
 // Page Formatting
 .page-content{
@@ -189,15 +207,14 @@ body {
 	}
 }
 .post-header__title{
-	font-family: $secondary-font-family;
+	@include secondary-font(3em);
+	text-transform: none;
 	font-weight: 300;
-	font-size: 3em;
 	margin-bottom: $spacing-unit*3;
 	line-height: 110%;
 }
 .post-header__client {
-	font-family: $secondary-font-family;
-	font-weight: 300;
+	@include secondary-font(1em);
 }
 .post-brief{
 	margin-bottom: $spacing-unit*3;
@@ -208,10 +225,7 @@ body {
 	}
 }
 .post-brief__header, .post-header__label{
-	font-family: $secondary-font-family;
-	font-weight: 400;
-	font-size: 70%;
-	text-transform: uppercase;
+	@include secondary-font(0.7em);
 	letter-spacing: 2px;
 	@media (min-width: 768px) {
 		@include span(1/5);
@@ -234,7 +248,7 @@ body {
 .post-link{text-decoration: underline;}
 .post-subhead {
 	margin: $spacing-unit 0 $spacing-unit/2 0;
-	font-family: $secondary-font-family;
+	@include secondary-font(1em);
 	color: $red;
 }
 
@@ -296,18 +310,14 @@ body {
 }
 .about__label {
 	margin-bottom: $spacing-unit/2;
-	font-family: $secondary-font-family;
-	font-weight: 400;
-	text-transform: uppercase;
+	@include secondary-font(1em);
 	color: $blue;
 }
 .about__contact-link {
 	display: inline-block;
 	margin-top: $spacing-unit/2;
 	padding: $spacing-unit/4 $spacing-unit/2;
-	font-family: $secondary-font-family;
-	font-weight: 400;
-	text-transform: uppercase;
+	@include secondary-font(1em);
 	border: 2px solid $blue;
 	transition: background 0.3s ease;
 }
@@ -327,10 +337,8 @@ body {
 }
 .highlight__header {
 	margin-bottom: $spacing-unit/4;
-	font-family: $secondary-font-family;
+	@include secondary-font(1em);
 	color: $blue;
-	font-weight: 400;
-	text-transform: uppercase;
 
 	@media (min-width: 768px) {
 		margin-bottom: $spacing-unit/2;
@@ -364,9 +372,7 @@ body {
 // Post Previews
 .post-previews__header {
 	margin-bottom: $spacing-unit;
-	font-family: $secondary-font-family;
-	font-weight: 400;
-	text-transform: uppercase;
+	@include secondary-font(1em);
 	color: $blue;
 }
 .post-preview__list {
@@ -400,9 +406,7 @@ body {
 	opacity: 0;
 	margin: $spacing-unit/2;
 	text-align: center;
-	font-family: $secondary-font-family;
-	font-weight: 300;
-	font-size: 0.8em;
+	@include secondary-font(0.8em);
 	line-height: 120%;
 }
 .post-preview__client, .post-preview__title {
@@ -430,10 +434,7 @@ body {
 	padding: $spacing-unit/4 $spacing-unit/2;
 	line-height: 1.5;
 	vertical-align: baseline;
-	font-family: $secondary-font-family;
-	font-size: 0.8em;
-	font-weight: 300;
-	text-transform: uppercase;
+	@include secondary-font(0.8em);
 	letter-spacing: 1px;
 	color: $blue;
 	transition: background 0.3s ease;
@@ -445,10 +446,7 @@ body {
 	margin-bottom: $spacing-unit*1.75;
 }
 .resume__header, .resume__subhead {
-	font-family: $secondary-font-family;
-	font-size: 1.1em;
-	font-weight: 300;
-	text-transform: uppercase;
+	@include secondary-font(1em);
 }
 .resume__header {
 	margin-bottom: 0;
@@ -460,10 +458,7 @@ body {
 .resume__contact{text-align: right;}
 .resume-section__header {
 	margin-bottom: $spacing-unit/2;
-	font-family: $secondary-font-family;
-	font-size: 1.1em;
-	font-weight: 300;
-	text-transform: uppercase;
+	@include secondary-font(1em);
 	color: $red;
 }
 .resume__list-secondary{margin-bottom: $spacing-unit/1.5;}
