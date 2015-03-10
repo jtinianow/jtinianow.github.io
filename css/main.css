@@ -185,7 +185,7 @@ body {
     body {
       font-size: 21px; } }
 
-.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6, .wf-loading ul, .wf-loading ol, .wf-loading p, .wf-loading span {
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6, .wf-loading ul, .wf-loading ol, .wf-loading p, .wf-loading span, .wf-loading a {
   visibility: hidden; }
 
 .wf-inactive body {
@@ -649,6 +649,8 @@ body {
   letter-spacing: 1px; }
 
 .post-preview__client {
+  text-transform: none;
+  letter-spacing: 0;
   color: #5e5e5e; }
 
 .resume {
