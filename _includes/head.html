@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="icon" type="image/png" href="/favicon-16x16.png">
+	<!-- Above the Fold -->
+	<style>
+		.site-header__container{position:fixed; top: 1rem; right: 0; left: 0; z-index: 998;}
+		.wrapper{margin: 0 1rem;}
+		.nav-primary__menu-toggle{float: right;}
+		.nav-primary__container{display: none;}
+		.home-page, .resume{padding-top: 6rem;}
+		.about__container{display: inline-block; margin-bottom: 8rem;}
+		@media (min-width: 768px) {.wrapper{margin: 0 4rem;}}
+		@media (min-width: 1280px) {.wrapper{max-width:65rem; margin: 0 auto;}}
+	</style>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
