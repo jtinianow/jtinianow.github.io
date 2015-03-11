@@ -217,6 +217,42 @@ body {
   left: 0;
   z-index: 998; }
 
+.site-header__title-link, .nav-primary__menu-toggle {
+  float: left;
+  clear: none;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: 0%; }
+
+.site-header__title-link--center, .site-header__title-link--center--mobile {
+  float: left;
+  clear: none;
+  width: 60%;
+  margin-left: 0%;
+  margin-right: 0%;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.4;
+  text-align: center;
+  transition: opacity 0.3s ease; }
+  @media (min-width: 768px) { }
+  @media (min-width: 768px) {
+    .site-header__title-link--center:hover, .site-header__title-link--center--mobile:hover {
+      opacity: 1; } }
+
+.site-header__title-link--center {
+  display: none; }
+  @media (min-width: 768px) {
+    .site-header__title-link--center {
+      display: block; } }
+
+@media (min-width: 768px) {
+  .site-header__title-link--center--mobile {
+    display: none; } }
+
 .site-footer__container {
   padding: 1rem 0;
   background: #e4e4e4; }
@@ -227,6 +263,9 @@ body {
   @media (min-width: 768px) {
     .site-footer {
       text-align: left; } }
+
+.site-footer__link {
+  text-decoration: underline; }
 
 @media (min-width: 768px) {
   .site-footer__info, .site-footer__contact {
@@ -240,7 +279,7 @@ body {
   font-size: 0.8em;
   line-height: 125%; }
 
-.nav-primary__menu-toggle {
+.nav-primary__menu-toggle svg {
   float: right; }
 
 .nav-primary__menu-toggle:hover {
@@ -392,12 +431,14 @@ body {
 
 .post-brief__description, .post-header__tags {
   text-transform: none;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  font-size: 1.1em;
+  line-height: 140%; }
   @media (min-width: 768px) {
     .post-brief__description, .post-header__tags {
       float: left;
       clear: none;
-      width: 80%;
+      width: 60%;
       margin-left: 0%;
       margin-right: 0%; } }
 
@@ -501,7 +542,8 @@ body {
       margin-bottom: 8rem; } }
 
 .about__container {
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 0; }
 
 @media (min-width: 768px) {
   .about__intro {
@@ -608,7 +650,7 @@ body {
 
 .highlight__snippet {
   font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.75em;
+  font-size: 0.675em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px; }
@@ -634,6 +676,9 @@ body {
   position: relative;
   line-height: 0;
   background: #FDFDFD; }
+
+.post-previews__container {
+  padding-top: 6rem; }
 
 .post-preview__container {
   position: absolute;
@@ -761,6 +806,7 @@ body {
   font-size: 0.7em; }
 
 .resume__text {
+  font-family: "garamond-premier-pro", Georgia, Times, serif;
   text-transform: none;
   letter-spacing: 0;
   font-weight: 300; }

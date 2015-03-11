@@ -34,7 +34,8 @@ text-color: "#FFFFFF"
 </section>
 
 <section class="wrapper post-section">
-	<img src="/content/make-posters/make-posters-both-1.jpg" alt="">
+	<img src="/content/make-posters/make-poster-blue-2.jpg" alt="">
+	<img src="/content/make-posters/make-poster-orange-2.jpg" alt="">
 	<p class="caption">Final prints, two colorways.</p>
 	<h3 class="post-subhead">The Final Prints</h3>
 	<p>After a bit of a learning curve, I printed a limited edition of 35 in each color. Every print has a unique background.</p>

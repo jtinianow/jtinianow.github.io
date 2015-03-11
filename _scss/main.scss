@@ -79,6 +79,35 @@ body {
 	left: 0;
 	z-index: 998;
 }
+.site-header__title-link, .nav-primary__menu-toggle{
+	@include span (1/5);
+}
+.site-header__title-link--center, .site-header__title-link--center--mobile {
+	@include span (3/5);
+	@include secondary-font(0.8em);
+	opacity: 0.4;
+	text-align: center;
+	transition: opacity 0.3s ease;
+
+	&:hover {
+		@media (min-width: 768px) {
+			opacity: 1;
+		}
+	}
+}
+.site-header__title-link--center {
+	display: none;
+
+	@media (min-width: 768px) {
+		display: block;
+	}
+}
+.site-header__title-link--center--mobile {
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
 
 // Site Footer
 .site-footer__container {
@@ -93,6 +122,7 @@ body {
 		text-align: left;
 	}
 }
+.site-footer__link{text-decoration: underline;}
 .site-footer__info, .site-footer__contact {
 
 	@media (min-width: 768px) {
@@ -105,7 +135,7 @@ body {
 }
 
 // Primary Nav
-.nav-primary__menu-toggle {
+.nav-primary__menu-toggle svg{
 	float: right;
 }
 .nav-primary__menu-toggle:hover{cursor: pointer;}
@@ -233,8 +263,10 @@ body {
 .post-brief__description, .post-header__tags{
 	text-transform: none;
 	letter-spacing: 0;
+	font-size: 1.1em;
+	line-height: 140%;
 	@media (min-width: 768px) {
-		@include span(4/5);
+		@include span(3/5);
 	}
 }
 .post-header__details{margin-bottom: 0;}
@@ -292,7 +324,10 @@ body {
 		margin-bottom: $spacing-unit*4;
 	}
 }
-.about__container{display: inline-block;}
+.about__container {
+	display: inline-block;
+	margin-bottom: 0;
+}
 .about__intro {
 
 	@media (min-width: 768px) {
@@ -370,7 +405,7 @@ body {
 	font-weight: 300;
 }
 .highlight__snippet {
-	@include secondary-font(1em);
+	@include secondary-font(0.9em);
 }
 .highlight__snippet--sub {
 	font-size: 0.8em;
@@ -389,6 +424,9 @@ body {
 	position: relative;
 	line-height: 0;
 	background: $background-color;
+}
+.post-previews__container{
+	padding-top: $spacing-unit*3;
 }
 .post-preview__container {
 	position: absolute;
@@ -485,6 +523,7 @@ body {
 }
 .resume__item--em{ font-size: 0.7em; }
 .resume__text {
+	font-family: $base-font-family;
 	text-transform: none;
 	letter-spacing: 0;
 	font-weight: 300;
