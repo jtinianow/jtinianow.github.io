@@ -286,11 +286,12 @@ body {
 
 .menu-link {
   display: inline-block;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 125%;
   padding: 0.5rem;
   transition: all 0.3s ease; }
   @media (min-width: 768px) { }
@@ -347,31 +348,24 @@ body {
   background: #FDFDFD; }
 
 .post-header {
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   padding: 4rem 0 10rem 0; }
+  @media (min-width: 768px) { }
   @media (min-width: 768px) {
     .post-header {
       padding-top: 6rem;
       padding-bottom: 20rem; } }
 
 .post-header__title {
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 3em;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-family: "garamond-premier-pro", Georgia, Times, serif;
+  font-size: 4em;
   text-transform: none;
-  font-weight: 300;
   margin-bottom: 6rem;
   line-height: 110%; }
-  @media (min-width: 768px) { }
-
-.post-header__client {
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-  @media (min-width: 768px) { }
 
 .post-brief {
   margin-bottom: 6rem; }
@@ -386,13 +380,8 @@ body {
         clear: both; } }
 
 .post-brief__header, .post-header__label {
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.7em;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  letter-spacing: 2px; }
-  @media (min-width: 768px) { }
+  letter-spacing: 2px;
+  font-weight: 300; }
   @media (min-width: 768px) {
     .post-brief__header, .post-header__label {
       float: left;
@@ -401,13 +390,15 @@ body {
       margin-left: 0%;
       margin-right: 0%; } }
 
-@media (min-width: 768px) {
-  .post-brief__description, .post-header__tags {
-    float: left;
-    clear: none;
-    width: 80%;
-    margin-left: 0%;
-    margin-right: 0%; } }
+.post-brief__description, .post-header__tags {
+  text-transform: none; }
+  @media (min-width: 768px) {
+    .post-brief__description, .post-header__tags {
+      float: left;
+      clear: none;
+      width: 80%;
+      margin-left: 0%;
+      margin-right: 0%; } }
 
 .post-header__details {
   margin-bottom: 0; }
@@ -424,8 +415,8 @@ body {
 
 .post-subhead {
   margin: 2rem 0 1rem 0;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -537,8 +528,8 @@ body {
 
 .about__label {
   margin-bottom: 1rem;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -549,8 +540,8 @@ body {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -580,8 +571,8 @@ body {
 
 .highlight__header {
   margin-bottom: 0.5rem;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -615,12 +606,23 @@ body {
   font-weight: 300; }
 
 .highlight__snippet {
-  color: #5e5e5e; }
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  @media (min-width: 768px) { }
+
+.highlight__snippet--sub {
+  font-size: 0.8em;
+  line-height: 150%;
+  text-transform: none;
+  letter-spacing: 0; }
 
 .post-previews__header {
   margin-bottom: 2rem;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -657,8 +659,8 @@ body {
   opacity: 0;
   margin: 1rem;
   text-align: center;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.8em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -674,12 +676,13 @@ body {
 
 .post-preview__client {
   text-transform: none;
+  font-weight: 300;
   letter-spacing: 0;
   color: #5e5e5e; }
 
 .resume {
   line-height: 1.45;
-  max-width: 40rem; }
+  max-width: 32rem; }
   @media (min-width: 960px) {
     .resume {
       margin: 0 auto; } }
@@ -691,8 +694,8 @@ body {
   padding: 0.5rem 1rem;
   line-height: 1.5;
   vertical-align: baseline;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.8em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -710,8 +713,8 @@ body {
   margin-bottom: 3.5rem; }
 
 .resume__header, .resume__subhead {
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px; }
@@ -729,12 +732,13 @@ body {
   margin-right: 0%; }
 
 .resume__contact {
-  text-align: right; }
+  text-align: right;
+  font-size: 0.8em; }
 
 .resume-section__header {
   margin-bottom: 1rem;
-  font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -744,11 +748,18 @@ body {
 .resume__list-secondary {
   margin-bottom: 1.33333rem; }
 
-.resume__list-primary__subhead {
-  color: black; }
-
 .resume__list-secondary__item {
-  color: #515151; }
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  @media (min-width: 768px) { }
 
 .resume__item--em {
-  font-style: italic; }
+  font-size: 0.7em; }
+
+.resume__text {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 300; }

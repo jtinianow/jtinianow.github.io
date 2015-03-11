@@ -3,7 +3,7 @@
 
 // Variables
 $base-font-family: "garamond-premier-pro", Georgia, Times, serif;
-$secondary-font-family: "refrigerator-deluxe", Helvetica Neue, Helvetica, Arial, sans-serif;
+$secondary-font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
 $base-font-size: 21px;
 $base-line-height: 150%;
 
@@ -22,7 +22,7 @@ $text-width: 40rem;
 // Mixins
 @mixin secondary-font($size) {
 	font-family: $secondary-font-family;
-	font-size: $size;
+	font-size: $size*0.75;
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -142,6 +142,7 @@ body {
 .menu-link{
 	display: inline-block;
 	@include secondary-font(1em);
+	line-height: 125%;
 	padding: $spacing-unit/4;
 	transition: all 0.3s ease;
 
@@ -199,6 +200,7 @@ body {
 	background: $background-color;
 }
 .post-header{
+	@include secondary-font(1em);
 	padding: $spacing-unit*2 0 $spacing-unit*5 0;
 
 	@media (min-width: 768px) {
@@ -207,14 +209,11 @@ body {
 	}
 }
 .post-header__title{
-	@include secondary-font(3em);
+	font-family: $base-font-family;
+	font-size: 4em;
 	text-transform: none;
-	font-weight: 300;
 	margin-bottom: $spacing-unit*3;
 	line-height: 110%;
-}
-.post-header__client {
-	@include secondary-font(1em);
 }
 .post-brief{
 	margin-bottom: $spacing-unit*3;
@@ -225,14 +224,14 @@ body {
 	}
 }
 .post-brief__header, .post-header__label{
-	@include secondary-font(0.7em);
 	letter-spacing: 2px;
+	font-weight: 300;
 	@media (min-width: 768px) {
 		@include span(1/5);
 	}
 }
 .post-brief__description, .post-header__tags{
-
+	text-transform: none;
 	@media (min-width: 768px) {
 		@include span(4/5);
 	}
@@ -370,7 +369,13 @@ body {
 	font-weight: 300;
 }
 .highlight__snippet {
-	color: lighten($text-color, 10%);
+	@include secondary-font(1em);
+}
+.highlight__snippet--sub {
+	font-size: 0.8em;
+	line-height: 150%;
+	text-transform: none;
+	letter-spacing: 0;
 }
 
 // Post Previews
@@ -410,7 +415,7 @@ body {
 	opacity: 0;
 	margin: $spacing-unit/2;
 	text-align: center;
-	@include secondary-font(0.8em);
+	@include secondary-font(1em);
 	line-height: 120%;
 }
 .post-preview__client, .post-preview__title {
@@ -422,6 +427,7 @@ body {
 }
 .post-preview__client {
 	text-transform: none;
+	font-weight: 300;
 	letter-spacing: 0;
 	color: lighten($text-color, 10%);
 }
@@ -429,7 +435,7 @@ body {
 // Resume
 .resume {
 	line-height: 1.45;
-	max-width: $text-width;
+	max-width: $text-width*0.8;
 
 	@media (min-width: 960px) {
 		margin: 0 auto;
@@ -463,13 +469,22 @@ body {
 .resume__info, .resume__contact {
 	@include span(1/2);
 }
-.resume__contact{text-align: right;}
+.resume__contact {
+	text-align: right;
+	font-size: 0.8em;
+}
 .resume-section__header {
 	margin-bottom: $spacing-unit/2;
 	@include secondary-font(1em);
 	color: $red;
 }
 .resume__list-secondary{margin-bottom: $spacing-unit/1.5;}
-.resume__list-primary__subhead{color: darken($text-color, 50%);}
-.resume__list-secondary__item{color: lighten($text-color, 5%);}
-.resume__item--em{font-style: italic;}
+.resume__list-secondary__item {
+	@include secondary-font(1.2em);
+}
+.resume__item--em{ font-size: 0.7em; }
+.resume__text {
+	text-transform: none;
+	letter-spacing: 0;
+	font-weight: 300;
+}
