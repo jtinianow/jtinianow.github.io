@@ -391,7 +391,8 @@ body {
       margin-right: 0%; } }
 
 .post-brief__description, .post-header__tags {
-  text-transform: none; }
+  text-transform: none;
+  letter-spacing: 0; }
   @media (min-width: 768px) {
     .post-brief__description, .post-header__tags {
       float: left;

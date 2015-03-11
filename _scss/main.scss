@@ -232,6 +232,7 @@ body {
 }
 .post-brief__description, .post-header__tags{
 	text-transform: none;
+	letter-spacing: 0;
 	@media (min-width: 768px) {
 		@include span(4/5);
 	}
