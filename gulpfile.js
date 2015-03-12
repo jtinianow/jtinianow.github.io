@@ -1,6 +1,9 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
+var compass     = require('gulp-compass');
+var minifyCSS   = require('gulp-minify-css');
+var rename      = require('gulp-rename');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 
@@ -45,10 +48,28 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(minifyCSS())
+        .pipe(rename('main.min.css'))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));
 });
+
+// Compile and minify output of files from _scss into _site/css and site
+// gulp.task('compass', function() {
+//     gulp.src('css/*.css')
+//     .pipe(compass())
+//     .on('error', function(error) {
+//         // Would like to catch error here
+//         console.log(error);
+//         this.emit('end');
+//     })
+//     .pipe(minifyCSS())
+//     .pipe(rename('style.min.css'))
+//     .pipe(gulp.dest('_site/'))
+//     .pipe(browserSync.reload({stream:true}))
+//     .pipe(gulp.dest('./'));
+// })
 
 /**
  * Watch scss files for changes & recompile
