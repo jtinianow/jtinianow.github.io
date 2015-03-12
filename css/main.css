@@ -189,10 +189,13 @@ body {
   visibility: hidden; }
 
 .wf-inactive body {
-  font-size: 13.65px; }
+  font-size: 15.75px; }
+  .wf-inactive body .about__text {
+    font-size: 25.2px;
+    line-height: 150%; }
   @media (min-width: 768px) {
     .wf-inactive body {
-      font-size: 17.85px; } }
+      font-size: 21px; } }
 
 .wrapper {
   margin: 0 1rem;
@@ -231,7 +234,7 @@ body {
   margin-left: 0%;
   margin-right: 0%;
   font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.6em;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -252,6 +255,9 @@ body {
 @media (min-width: 768px) {
   .site-header__title-link--center--mobile {
     display: none; } }
+
+.hidden {
+  visibility: hidden; }
 
 .site-footer__container {
   padding: 1rem 0;
@@ -304,24 +310,32 @@ body {
 .nav-primary__menu-col {
   float: left;
   clear: none;
-  width: 45%;
+  width: 48.5%;
   margin-left: 0%;
-  margin-right: 0%;
+  margin-right: 3%;
   float: right; }
+  .nav-primary__menu-col:last-child {
+    margin-right: 0%; }
+  @media (min-width: 768px) {
+    .nav-primary__menu-col {
+      float: left;
+      clear: none;
+      width: 22.75%;
+      margin-left: 0%;
+      margin-right: 3%;
+      float: right; }
+      .nav-primary__menu-col:last-child {
+        margin-right: 0%; } }
 
 @media (min-width: 800px) {
   .nav-primary {
     margin-right: 3rem; } }
 
-.alpha {
-  margin-left: 10%; }
-
 .menu-col__list {
   list-style: none; }
 
 .menu-col__item {
-  width: 100%;
-  text-align: right; }
+  width: 100%; }
 
 .menu-link {
   display: inline-block;
@@ -347,6 +361,10 @@ body {
   .menu-link:hover {
     background: #00aef1;
     color: #fff; } }
+
+.menu-link--page--inactive:hover {
+  background: transparent;
+  color: inherit; }
 
 .page-content {
   margin-bottom: 8rem; }
@@ -392,11 +410,10 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 4rem 0 10rem 0; }
+  padding: 6rem 0 10rem 0; }
   @media (min-width: 768px) { }
   @media (min-width: 768px) {
     .post-header {
-      padding-top: 6rem;
       padding-bottom: 20rem; } }
 
 .post-header__title {
@@ -551,8 +568,7 @@ body {
     clear: none;
     width: 56.25%;
     margin-left: 0%;
-    margin-right: 0%;
-    margin-right: 2rem; } }
+    margin-right: 0%; } }
 
 .about__text {
   font-size: 1.5em;
@@ -599,9 +615,11 @@ body {
 .highlight__container--col {
   float: left;
   clear: none;
-  width: 50%;
+  width: 48.5%;
   margin-left: 0%;
-  margin-right: 0%; }
+  margin-right: 3%; }
+  .highlight__container--col:last-child {
+    margin-right: 0%; }
   @media (min-width: 768px) {
     .highlight__container--col {
       float: left;

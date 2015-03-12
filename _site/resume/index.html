@@ -73,7 +73,7 @@
 <div class="nav-primary__container">
 	<nav role="navigation" class="wrapper nav-primary">
 	<div class="nav-primary__menu">
-		<div class="nav-primary__menu-col alpha">
+		<div class="nav-primary__menu-col">
 			<ul class="menu-col__list">
 				<li class="menu-col__item"><a href="/#work" class="menu-link menu-link--header">Work</a></li>
 				
@@ -89,10 +89,12 @@
 		</div>
 		<div class="nav-primary__menu-col">
 			<ul class="menu-col__list">
-				<li class="menu-col__item"><a href="/" class="menu-link menu-link--header">About</a></li>
+				<li class="menu-col__item"><a href="/" class="menu-link menu-link--header">Jeremy Tinianow</a></li>
+				<li class="menu-col__item"><a href="/" class="menu-link menu-link--page">About</a></li>
 				<li class="menu-col__item">
-					<a href="/resume" class="menu-link menu-link--page">Resume</a>
-				</li>
+					<a href="/resume" class="menu-link menu-link--page">Resume</a></li>
+				<li class="menu-col__item"><a href="mailto:hello@jtinianow.com" class="menu-link menu-link--page">hello@jtinianow.com</a></li>
+				<li class="menu-col__item menu-link menu-link--page menu-link--page--inactive">614 561 2619</li>
 			</ul>
 		</div>
 	</div>
@@ -184,7 +186,7 @@
 <section class="resume-section__container">
 	<h4 class="resume-section__header">Recognition</h4>
 	<ul class="resume__list-primary">
-		<li class="resume__list-primary__subhead">Creative Anarchy by Denise Bosler
+		<li class="resume__list-primary__subhead">&ldquo;Creative Anarchy&rdquo; by Denise Bosler
 			<ul class="resume__list-secondary">
 				<li class="resume__list-secondary__item resume__text">Posters featured in compilation published by HOW Design.</li>
 			</ul>
@@ -249,6 +251,9 @@ $('.nav-primary__menu-toggle').click(function() {
 });
 $('.menu-link').click(function() {
 	$('.nav-primary__container').toggleClass('nav-primary__container--visible');
+});
+$('.nav-primary__menu-toggle').click(function() {
+	$('.site-header__title-link--center').toggleClass('hidden');
 });
 </script>
         

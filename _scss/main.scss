@@ -50,10 +50,12 @@ body {
 	h1, h2, h3, h4, h5, h6, ul, ol, p, span, a {visibility: hidden;}
 }
 .wf-inactive body{
-	font-size: $base-font-size * 0.65;
+	font-size: $base-font-size * 0.75;
+
+	.about__text {font-size: $base-font-size*1.2; line-height: 150%;}
 
     @media (min-width: 768px) {
-    	font-size: $base-font-size*0.85;
+    	font-size: $base-font-size*1;
     }
 }
 .wrapper{
@@ -84,7 +86,7 @@ body {
 }
 .site-header__title-link--center, .site-header__title-link--center--mobile {
 	@include span (3/5);
-	@include secondary-font(0.8em);
+	@include secondary-font(1em);
 	opacity: 0.4;
 	text-align: center;
 	transition: opacity 0.3s ease;
@@ -108,6 +110,7 @@ body {
 		display: none;
 	}
 }
+.hidden {visibility: hidden;}
 
 // Site Footer
 .site-footer__container {
@@ -154,8 +157,13 @@ body {
 }
 .nav-primary, .nav-primary__menu{margin-top: $spacing-unit;}
 .nav-primary__menu-col{
-	@include span(45/100);
+	@include col(1/2);
 	float: right;
+	
+	@media (min-width: 768px) {
+		@include col(1/4);
+		float: right;
+	}
 }
 .nav-primary {
 	
@@ -163,11 +171,9 @@ body {
 	margin-right: $spacing-unit*1.5;
 	}
 }
-.alpha{margin-left: 10%}
 .menu-col__list{list-style: none;}
 .menu-col__item{
 	width: 100%;
-	text-align: right;
 }
 .menu-link{
 	display: inline-block;
@@ -192,6 +198,7 @@ body {
 		color: #fff;
 	}
 }
+.menu-link--page--inactive:hover {background: transparent; color: inherit;}
 
 // Page Formatting
 .page-content{
@@ -231,10 +238,9 @@ body {
 }
 .post-header{
 	@include secondary-font(1em);
-	padding: $spacing-unit*2 0 $spacing-unit*5 0;
+	padding: $spacing-unit*3 0 $spacing-unit*5 0;
 
 	@media (min-width: 768px) {
-		padding-top: $spacing-unit*3;
 		padding-bottom: $spacing-unit*10;
 	}
 }
@@ -332,7 +338,6 @@ body {
 
 	@media (min-width: 768px) {
 		@include span(9/16);
-		margin-right: $spacing-unit;
 	}
 }
 .about__text {
@@ -368,7 +373,7 @@ body {
 .about__highlights {
 }
 .highlight__container--col {
-	@include span(1/2);
+	@include col(1/2);
 
 	@media (min-width: 768px) {
 		@include col(1/2);
