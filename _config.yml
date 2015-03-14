@@ -15,3 +15,7 @@ pygments: true
 
 # Permalinks
 permalink: pretty
+
+# Sitemaps
+gems:
+  - jekyll-sitemap
