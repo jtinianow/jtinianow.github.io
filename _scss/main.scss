@@ -31,6 +31,14 @@ $text-width: 40rem;
 	}
 }
 
+@mixin text-underline($color) {
+	background-image: -webkit-linear-gradient(lighten($color, 40%) 50%,$color 50%);
+	background-image: linear-gradient(lighten($color, 40%) 50%, $color 50%);
+	background-size: 2px 2px;
+	background-position: 0 90%;
+	background-repeat: repeat-x;
+}
+
 body {
 	color: blue;
 	font-family: $base-font-family;
@@ -76,6 +84,7 @@ body {
 }
 .no-display{display: none;}
 // Site Header
+.logo { vertical-align: middle; }
 .site-header__container{
 	position: fixed;
 	top: $spacing-unit/2;
@@ -84,7 +93,7 @@ body {
 	z-index: 998;
 }
 .site-header__title-link, .nav-primary__menu-toggle{
-	@include span (1/5);
+	@include span (1/10);
 }
 .site-header__title-link--center, .site-header__title-link--center--mobile {
 	@include span (3/5);
@@ -144,9 +153,40 @@ body {
 	float: right;
 }
 .nav-primary__menu-toggle:hover{cursor: pointer;}
-.nav-primary__container{
-	display: none;
+
+.nav-primary--items {
+	@include span (9/10);
+	text-align: right;
+	color: lighten($text-color, 10%);
+
+	@media (min-width: 800px) {
+		color: $text-color;
+	}
 }
+
+.nav-primary__item {
+	margin-left: $spacing-unit*0.7;
+	@include secondary-font(1em);
+	letter-spacing: 0;
+	vertical-align: middle;
+	@include text-underline($blue);
+
+	@media (min-width: 800px) {
+		letter-spacing: 1px;
+	}
+
+	&--static {
+		@extend .nav-primary__item;
+		margin-left: 0;
+		color: lighten($text-color, 30%);
+		background: none;
+		@media (min-width: 800px) {
+		letter-spacing: 1px;
+	}
+
+	}
+}
+
 .nav-primary__container--visible {
 	display: block;
 	position: fixed;
@@ -345,8 +385,9 @@ body {
 .post-preview__thumb{max-width: 100%; height: auto;}
 
 // About
+.about { padding-top: $spacing-unit*3; }
 .about__container, .about__intro{
-	margin-bottom: $spacing-unit*2;
+	margin-bottom: $spacing-unit;
 
 	@media (min-width: 768px) {
 		margin-bottom: $spacing-unit*4;
@@ -359,7 +400,6 @@ body {
 	@include cf();
 
 	&--more {
-		display: none;
 		@include cf();
 	}
 }
@@ -373,7 +413,6 @@ body {
 	font-size: 1.3em;
 	font-weight: 400;
 	line-height: 130%;
-	color: lighten($text-color, 5%);
 
 	&--light {
 		color: lighten($text-color, 40%);
@@ -391,15 +430,17 @@ body {
 	@include secondary-font(1em);
 	color: $blue;
 }
-.about__contact-link {
+.about__link {
 	display: inline-block;
+	clear: both;
+	float: left;
 	margin-top: $spacing-unit/2;
 	padding: $spacing-unit/4 $spacing-unit/2;
 	@include secondary-font(1em);
 	border: 2px solid $blue;
 	transition: background 0.3s ease;
 }
-.about__contact-link:hover {
+.about__link:hover {
 	@media (min-width: 800px) {
 		background: lighten($blue, 40%);
 	}
@@ -454,14 +495,14 @@ body {
 	line-height: 135%;
 }
 .highlight__item a {transition: background 0.3s ease;}
-.highlight__item a:hover {
 
-	@media (min-width: 800px) {
-		background: lighten($grey-color, 36%);
-	} 
-}
 .highlight__subhead {
 	font-weight: 300;
+}
+.highlight__linkout {
+	display: inline-block;
+	margin-bottom: $spacing-unit/5;
+	@include text-underline($blue);
 }
 .highlight__snippet {
 	@include secondary-font(0.9em);
@@ -485,11 +526,10 @@ body {
 	background: $background-color;
 }
 .post-previews__container{
-	padding-top: $spacing-unit*3;
+	display: inline-block;
+	padding-bottom: $spacing-unit*3;
 }
 .post-preview__container {
-	position: absolute;
-	top: 0;
 	width: 100%;
 }
 .post-preview__thumb {
@@ -497,22 +537,9 @@ body {
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 .post-preview__link {display: inline-block; width: 100%;}
-.post-preview__link:hover{
-	
-	@media (min-width: 768px) {
-			.post-preview__info, .post-preview__thumb {
-				transition: opacity 0.3s ease;
-			}
-			.post-preview__info{opacity: 1;}
-			.post-preview__thumb {
-				opacity: 0.1;
-			}
-		}
-	} 
+
 .post-preview__info {
-	opacity: 0;
-	margin: $spacing-unit/2;
-	text-align: center;
+	margin: $spacing-unit/2 0 $spacing-unit 0;
 	@include secondary-font(1em);
 	line-height: 120%;
 }
@@ -520,10 +547,12 @@ body {
 	margin-bottom: $spacing-unit/4;
 }
 .post-preview__title {
-	color: $blue;
+	@include span (4/5);
 	letter-spacing: 1px;
 }
 .post-preview__client {
+	@include stack();
+	margin-bottom: $spacing-unit*0.1;
 	text-transform: none;
 	font-weight: 300;
 	letter-spacing: 0;

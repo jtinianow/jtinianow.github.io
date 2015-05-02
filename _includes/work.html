@@ -1,0 +1,22 @@
+<section id="work" class="post-previews__container">
+<h2 class="post-previews__header">Select Work</h2>
+  <ul class="post-previews">
+    
+    {% for post in site.posts %}
+      <li class="post-preview__list">
+		<a class="post-preview__link" href="{{ post.url }}">
+			<img class="post-preview__thumb" src="{{ post.thumbnail }}" alt="">
+		<div class="post-preview__container">
+			<div class="post-preview__info">
+				<h3 class="post-preview__title">{{ post.title }}</h3>
+				<!-- <p class="post-preview__client">{{ post.client }}</p> -->
+				<p class="post-preview__client">{{ post.tags }}</p>
+			</div>
+		</div>
+		</a>
+      </li>
+    {% endfor %}
+    
+  </ul>
+</section>
+
