@@ -3,6 +3,7 @@ layout: post
 title:  "MAKE Puzzle"
 client: "Columbus Idea Foundry"
 date:   2015-03-06 21:07:32
+permalink: /make-puzzle
 thumbnail: content/make-puzzle/make-puzzle-thumb.jpg
 categories: projects
 tags:

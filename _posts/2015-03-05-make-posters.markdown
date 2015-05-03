@@ -3,6 +3,7 @@ layout: post
 title:  "Maker Movement Posters"
 client: "Personal"
 date:   2015-03-05 21:07:32
+permalink: /make-posters
 thumbnail: content/make-posters/make-poster-blue-thumb.jpg
 categories: projects
 tags:

@@ -3,6 +3,7 @@ layout: post
 title:  "Columbus Idea Foundry Brand"
 client: "Columbus Idea Foundry"
 date:   2015-03-08 21:07:32
+permalink: /columbus-idea-foundry
 thumbnail: content/cif/CIF-thumb.jpg
 categories: projects
 tags:

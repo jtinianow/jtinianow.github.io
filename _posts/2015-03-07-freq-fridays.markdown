@@ -3,6 +3,7 @@ layout: post
 title:  "Frequency Fridays"
 client: "Fuse Factory"
 date:   2015-03-07 21:07:32
+permalink: /frequency-fridays
 thumbnail: content/freq-fridays/freq-fridays-thumb.jpg
 categories: projects
 tags:
