@@ -1,22 +1,22 @@
-<nav role="navigation" class="wrapper nav-primary">
-	<div class="nav-primary__menu">
-		<div class="nav-primary__menu-col">
-			<ul class="menu-col__list">
-				<li class="menu-col__item"><a href="/#work" class="menu-link menu-link--header">Work</a></li>
-				{% for post in site.posts %}
-				<li class="menu-col__item"><a href="{{ post.url }}" class="menu-link menu-link--page">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
-		</div>
-		<div class="nav-primary__menu-col">
-			<ul class="menu-col__list">
-				<li class="menu-col__item"><a href="/" class="menu-link menu-link--header">Jeremy Tinianow</a></li>
-				<li class="menu-col__item"><a href="/" class="menu-link menu-link--page">About</a></li>
-				<li class="menu-col__item">
-					<a href="/resume" class="menu-link menu-link--page">Resume</a></li>
-				<li class="menu-col__item"><a href="mailto:hello@jtinianow.com" class="menu-link menu-link--page">hello@jtinianow.com</a></li>
-				<li class="menu-col__item menu-link menu-link--page menu-link--page--inactive">614 561 2619</li>
-			</ul>
-		</div>
-	</div>
+<nav class="wrapper nav-primary" role="navigation">
+  <div class="nav-primary__menu">
+    <div class="nav-primary__menu-col">
+      <ul class="menu-col__list">
+        <li class="menu-col__item"><a class="menu-link menu-link--header" href="/#work">Work</a></li>
+        {% for post in site.posts %}
+        <li class="menu-col__item"><a class="menu-link menu-link--page" href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="nav-primary__menu-col">
+      <ul class="menu-col__list">
+        <li class="menu-col__item"><a class="menu-link menu-link--header" href="/">Jeremy Tinianow</a></li>
+        <li class="menu-col__item"><a class="menu-link menu-link--page" href="/">About</a></li>
+        <li class="menu-col__item">
+          <a class="menu-link menu-link--page" href="/resume">Resume</a></li>
+        <li class="menu-col__item"><a class="menu-link menu-link--page" href="mailto:hello@jtinianow.com">hello@jtinianow.com</a></li>
+        <li class="menu-col__item menu-link menu-link--page menu-link--page--inactive">614 561 2619</li>
+      </ul>
+    </div>
+  </div>
 </nav>

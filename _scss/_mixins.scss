@@ -1,0 +1,22 @@
+/*****************************************************************************/
+/*
+/* Mixins
+/*
+/*****************************************************************************/
+
+@mixin secondary-font($size) {
+  font-family: $secondary-font-family;
+  font-size: $size*0.75;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@mixin text-underline($color) {
+  background-image: -webkit-linear-gradient(lighten($color, 40%) 50%,$color 50%);
+  background-image: linear-gradient(lighten($color, 40%) 50%, $color 50%);
+  background-size: 2px 2px;
+  background-position: 0 90%;
+  background-repeat: repeat-x;
+}
+
