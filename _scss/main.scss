@@ -79,6 +79,9 @@ body {
 .logo { vertical-align: middle; }
 
 .site-header {
+	position: absolute;
+	left: 0;
+	right: 0;
 	&__container{
 		position: fixed;
 		top: $spacing-unit/2;
@@ -382,6 +385,7 @@ body {
 	&__header {
 		margin-bottom: $spacing-unit;
 		@include secondary-font(1em);
+		color: $blue;
 	}
 	&__list {
 		position: relative;
