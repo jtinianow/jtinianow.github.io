@@ -1,8 +1,8 @@
 <section class="post-previews__container" id="work">
   <h2 class="post-previews__header">Select Work</h2>
-  <ul class="post-previews">
+  <ul class="post-previews__list">
     {% for post in site.posts %}
-    <li class="post-preview__list">
+    <li class="post-preview__item">
     <a class="post-preview__link" href="{{ post.url }}">
       <img class="post-preview__thumb" src="{{ post.thumbnail }}" alt="">
     <div class="post-preview__container">

@@ -55,22 +55,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('css'));
 });
 
-// Compile and minify output of files from _scss into _site/css and site
-// gulp.task('compass', function() {
-//     gulp.src('css/*.css')
-//     .pipe(compass())
-//     .on('error', function(error) {
-//         // Would like to catch error here
-//         console.log(error);
-//         this.emit('end');
-//     })
-//     .pipe(minifyCSS())
-//     .pipe(rename('style.min.css'))
-//     .pipe(gulp.dest('_site/'))
-//     .pipe(browserSync.reload({stream:true}))
-//     .pipe(gulp.dest('./'));
-// })
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
