@@ -1,0 +1,12 @@
+<section class="work-list__wrapper wrapper" id="work">
+<h2 class="work-list__label">Work</h2>
+	<ul class="work-list__list">
+		{% for post in site.posts %}
+		<li class="work-list__item">
+			<a href="{{ post.url }}" class="work-list__link">
+				<h3 class="work-list__title">{{ post.title }}</h3>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

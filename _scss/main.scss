@@ -444,9 +444,9 @@ body {
 	}
 	&__label {
 		@include secondary-font(1em);
-		text-align: center;
 		color: $blue;
 	}
+	// Labels
 	&__heading--horizontal,
 	&__heading--vertical,
 	&__heading--vertical--omega {
@@ -467,6 +467,7 @@ body {
 	}
 	&__heading--vertical { left: 0; }
 	&__heading--vertical--omega { right: 0; }
+	// Quadrants, Base Styling
 	&__section--top-left,
 	&__section--top-right,
 	&__section--bottom-left,
@@ -480,6 +481,7 @@ body {
 		box-sizing: border-box;
 		background: $background-color;
 	}
+	// Quadrants, Position and Borders
 	&__section--top-left {
 		top: 0;
 		left: 0;
@@ -500,39 +502,96 @@ body {
 		bottom: 0;
 		right: 0;
 	}
-	&__thumb {
+	&__title {
+		position: absolute;
+		top: 0;
+		width: 200%;
+		transform: translateX(-25%);
+		@include secondary-font(1em);
+		line-height: 110%;
+		text-align: center;
+		text-transform: none;
+		letter-spacing: 0;
+		text-decoration: underline;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+		transition-delay: 0.1s;
+	}
+	// Images, Base Styling
+	&__link {
 		position: absolute;
 		margin: 0 auto;
-		display: inline-block;
+		max-width: 50px;
+		@media (min-width: 800px) {
+			padding-top: $spacing-unit*0.75;
+			max-width: 100%;
+		}
+		&--seekr {
+			right: 20%;
+			top: 0;
+		}
+		&--cif-brand {
+			right: 30%;
+			top: $spacing-unit*1.75;
+			@media (min-width: 800px) { top: 15%; }
+		}
+		&--ff {
+			right: 55%;
+			top: $spacing-unit*4.25;
+			@media (min-width: 800px) { top: 45%; }
+		}
+		&--make-posters {
+			right: 30%;
+			top: $spacing-unit*4.25;
+			@media (min-width: 800px) { top: 50%; }
+		}
+		&--make-puzzle {
+			right: 65%;
+			top: $spacing-unit*6;
+			@media (min-width: 800px) { top: 65%; }
+		}
+		&:hover .work-grid__title {
+			@media (min-width: 800px) {
+				opacity: 1;
+				transition-delay: 0.2s;
+			}
+		}
+	}
+	&__thumb {
 		max-width: 50px;
 		height: auto;
-		@media (min-width: 800px) { max-width: 100%; }
+		transition: opacity 0.3s ease;
+		@media (min-width: 800px) {
+			max-width: 110px;
+			opacity: 0.5;
+		}
+		&:hover {
+			@media (min-width: 800px) {
+				opacity: 1;
+			}
+		}
 	}
 }
 
-.project-thumb {
-	&__seekr { right: 25%; }
-	&__cif-brand {
-		right: 35%;
-		top: $spacing-unit*1.5;
-		@media (min-width: 800px) { top: 20%; }
+/* Work List */
+.work-list {
+	&__wrapper { margin-top: $spacing-unit*3; }
+	&__label {
+		@include secondary-font(1em);
+		color: $blue;
 	}
-	&__ff {
-		right: 55%;
-		top: $spacing-unit*3.75;
-		@media (min-width: 800px) { top: 55%; }
+	&__link { display: inline-block; }
+	&__item {
+		margin: $spacing-unit/3 0;
 	}
-	&__make-posters {
-		right: 35%;
-		top: $spacing-unit*4.25;
-		@media (min-width: 800px) { top: 60%; }
-	}
-	&__make-puzzle {
-		right: 65%;
-		top: $spacing-unit*5.5;
-		@media (min-width: 800px) { top: 75%; }
+	&__title {
+		font-size: 1.5rem;
+		line-height: 150%;
+		@media (min-width: 800px) { font-size: 3rem; }
 	}
 }
+
+
 
 /* About */
 .about {
