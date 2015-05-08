@@ -84,7 +84,7 @@ body {
 		top: $spacing-unit/2;
 		right: 0;
 		left: 0;
-		z-index: 998;
+		z-index: 999;
 	}
 	&__title-link {
 		@include span (1/10);
@@ -428,6 +428,109 @@ body {
 		font-weight: 300;
 		letter-spacing: 0;
 		color: lighten($text-color, 10%);
+	}
+}
+
+/* Work Grid */
+.work-grid {
+	position: relative;
+	min-height: 250px;
+	height: 100%;
+	overflow: hidden;
+	@media (min-width: 800px) { min-height: 450px; height: 100%; }
+	&__wrapper {
+		position: relative;
+		margin-top: $spacing-unit*3;
+	}
+	&__label {
+		@include secondary-font(1em);
+		text-align: center;
+		color: $blue;
+	}
+	&__heading--horizontal,
+	&__heading--vertical,
+	&__heading--vertical--omega {
+		position: relative;
+		padding: $spacing-unit/2;
+		z-index: 998;
+		@include secondary-font(1em);
+		background: $background-color;
+		text-align: center;
+		color: lighten($text-color, 40%)
+	}
+	&__heading--vertical,
+	&__heading--vertical--omega {
+		position: absolute;
+		top: 50%;
+		transform: rotate(270deg) translateX($spacing-unit*0.55);
+		@media (min-width: 800px) { transform: rotate(270deg) translateX($spacing-unit*0.8); }
+	}
+	&__heading--vertical { left: 0; }
+	&__heading--vertical--omega { right: 0; }
+	&__section--top-left,
+	&__section--top-right,
+	&__section--bottom-left,
+	&__section--bottom-right {
+		position: absolute;
+		// left: 0;
+		// top: 0;
+		width: 50%;
+		height: 50%;
+		display: block;
+		box-sizing: border-box;
+		background: $background-color;
+	}
+	&__section--top-left {
+		top: 0;
+		left: 0;
+		border-bottom: 1px solid lighten($text-color, 65%);
+		border-right: 1px solid lighten($text-color, 65%);
+	}
+	&__section--top-right {
+		top: 0;
+		right: 0;
+		border-bottom: 1px solid lighten($text-color, 65%);
+	}
+	&__section--bottom-left {
+		bottom: 0;
+		left: 0;
+		border-right: 1px solid lighten($text-color, 65%);
+	}
+	&__section--bottom-right {
+		bottom: 0;
+		right: 0;
+	}
+	&__thumb {
+		position: absolute;
+		margin: 0 auto;
+		display: inline-block;
+		max-width: 50px;
+		height: auto;
+		@media (min-width: 800px) { max-width: 100%; }
+	}
+}
+
+.project-thumb {
+	&__seekr { right: 25%; }
+	&__cif-brand {
+		right: 35%;
+		top: $spacing-unit*1.5;
+		@media (min-width: 800px) { top: 20%; }
+	}
+	&__ff {
+		right: 55%;
+		top: $spacing-unit*3.75;
+		@media (min-width: 800px) { top: 55%; }
+	}
+	&__make-posters {
+		right: 35%;
+		top: $spacing-unit*4.25;
+		@media (min-width: 800px) { top: 60%; }
+	}
+	&__make-puzzle {
+		right: 65%;
+		top: $spacing-unit*5.5;
+		@media (min-width: 800px) { top: 75%; }
 	}
 }
 
