@@ -315,7 +315,7 @@ body {
 		&__title{
 			margin-bottom: $spacing-unit*3;
 			font-family: $base-font-family;
-			font-size: 4em;
+			font-size: 3.5rem;
 			line-height: 110%;
 			text-transform: none;
 		}
@@ -331,6 +331,8 @@ body {
 	&-brief__header,
 	&-header__label {
 		letter-spacing: 2px;
+		font-size: 90%;
+		line-height: 2;
 		@media (min-width: 768px) { @include span(1/5); }
 	}
 	&-brief__description,
@@ -431,6 +433,44 @@ body {
 	}
 }
 
+/* Work Header */
+.work-header {
+	&__wrapper { margin-top: $spacing-unit*3; }
+	&__label {
+		float: left;
+		@include secondary-font(1em);
+		color: $blue;
+	}
+	&__view-options { float: right; }
+	&__toggle,
+	&__toggle-option,
+	&__glyph {
+		@include secondary-font(1em);
+		text-transform: none;
+		letter-spacing: 0;
+		color: lighten($text-color, 55%);
+		&:visited { color: lighten($text-color, 55%); }
+		&--active,
+		&--active:hover { text-decoration: underline; }
+	}
+}
+
+/* Work Display */
+.work-display {
+	top: 0;
+	opacity: 1;
+	transition: opacity 0.75s ease-in-out;
+	&--inactive {
+		height: 0;
+		visibility: hidden;
+		top: 0;
+		opacity: 0;
+		transition: opacity 0.75s ease;
+		transition: height 0s ease;
+		transition-delay: 1s;
+	}
+}
+
 /* Work Grid */
 .work-grid {
 	position: relative;
@@ -440,7 +480,6 @@ body {
 	@media (min-width: 800px) { min-height: 450px; height: 100%; }
 	&__wrapper {
 		position: relative;
-		margin-top: $spacing-unit*3;
 	}
 	&__label {
 		@include secondary-font(1em);
@@ -575,19 +614,35 @@ body {
 
 /* Work List */
 .work-list {
-	&__wrapper { margin-top: $spacing-unit*3; }
-	&__label {
-		@include secondary-font(1em);
-		color: $blue;
+	&__link {
+		position: relative;
+		display: inline-block;
+		@media (min-width: 800px) {
+			&:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: $spacing-unit/5;
+				left: 0;
+				background: $blue;
+				width: 0;
+				transition: all 0.3s ease-in-out 0s;
+			}
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+			}
+		}
 	}
-	&__link { display: inline-block; }
 	&__item {
 		margin: $spacing-unit/3 0;
 	}
 	&__title {
 		font-size: 1.5rem;
 		line-height: 150%;
-		@media (min-width: 800px) { font-size: 3rem; }
+		@media (min-width: 800px) { font-size: 3.5rem; }
 	}
 }
 
