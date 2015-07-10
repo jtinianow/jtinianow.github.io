@@ -289,7 +289,6 @@ body {
 	&-nav__links { max-width: 40rem; }
 	&-section {
 		margin-top: $spacing-unit;
-		h1,
 		h2,
 		h3,
 		h4,
@@ -308,16 +307,22 @@ body {
 		}
 	}
 	&-header{
-		padding: $spacing-unit*3 0 $spacing-unit*5 0;
+		padding: $spacing-unit*5 0 $spacing-unit*8 0;
 		@include secondary-font(1em);
-		@media (min-width: 768px) { padding-bottom: $spacing-unit*10; }
-		&__container{ background: $background-color; }
+		@media (min-width: 768px) { padding: $spacing-unit*5 0 $spacing-unit*9 0; }
+		&__container{
+			background: $background-color;
+			background-size: cover;
+			background-position: center;
+		}
 		&__title{
-			margin-bottom: $spacing-unit*3;
+			margin-top: $spacing-unit/2;
+			margin-bottom: $spacing-unit*2;
 			font-family: $base-font-family;
 			font-size: 3.5rem;
 			line-height: 110%;
 			text-transform: none;
+			text-align: center;
 		}
 		&__details { margin-bottom: 0; }
 	}
@@ -327,24 +332,26 @@ body {
 			margin-bottom: $spacing-unit*2;
 			@include cf();
 		}
+		&__container {
+			margin: $spacing-unit auto;
+		}
 	}
 	&-brief__header,
 	&-header__label {
 		letter-spacing: 2px;
 		font-size: 90%;
 		line-height: 2;
-		@media (min-width: 768px) { @include span(1/5); }
 	}
 	&-brief__description,
 	&-header__tags {
 		text-transform: none;
 		letter-spacing: 0;
-		font-size: 1.1em;
 		line-height: 140%;
-		@media (min-width: 768px) { @include span(3/5); }
 	}
 	&-link { text-decoration: underline; }
-	&-subhead {
+	&-subhead,
+	&-brief__header,
+	&-header__label {
 		margin: $spacing-unit 0 $spacing-unit/2 0;
 		@include secondary-font(1em);
 		color: $red;
@@ -384,10 +391,10 @@ body {
 	&__header {
 		margin-bottom: $spacing-unit;
 		@include secondary-font(1em);
+		color: $blue;
 	}
 	&__list {
 		position: relative;
-		line-height: 0;
 		background: $background-color;
 	}
 }
@@ -396,12 +403,16 @@ body {
 .post-preview {
 	&__item {
 		display: block;
-		@media (min-width: 600px) { @include span(1/2); }
-		@media (min-width: 900px) { @include span(1/4); }
+		margin-bottom: $spacing-unit;
+		@media (min-width: 800px) {
+			@include col(1/2, $cycle: 2, $gutter: 5);
+			margin-bottom: $spacing-unit;
+		}
 	}
 	&__thumb {
 		max-width: 100%;
 		height: auto;
+		border: 1px solid #eee;
 	}
 	&__container { width: 100%; }
 	&__thumb {
@@ -409,27 +420,34 @@ body {
 			-webkit-transform: translateZ(0) scale(1.0, 1.0);
 	}
 	&__link {
+		position: relative;
 		display: inline-block;
 		width: 100%;
+		overflow: hidden;
+		text-align: center;
 	}
 	&__info {
-		margin: $spacing-unit/2 0 $spacing-unit 0;
 		@include secondary-font(1em);
 		line-height: 120%;
 	}
 	&__client,
-	&__title { margin-bottom: $spacing-unit/4; }
+	&__title { margin-bottom: $spacing-unit/8; }
 	&__title {
-		@include span (4/5);
-		letter-spacing: 1px;
+		text-transform: none;
+		letter-spacing: 0.25px;
+		color: $blue;
 	}
 	&__client {
 		@include stack();
 		margin-bottom: $spacing-unit*0.1;
+		font-size: 0.8em;
+		color: lighten($text-color, 40%);
+	}
+	&__brief {
+		@include secondary-font(1em);
 		text-transform: none;
-		font-weight: 300;
 		letter-spacing: 0;
-		color: lighten($text-color, 10%);
+		line-height: 1.35;
 	}
 }
 

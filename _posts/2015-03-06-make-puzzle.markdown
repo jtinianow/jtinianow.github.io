@@ -10,7 +10,9 @@ tags:
 - "Visual Design, "
 - "Laser Cutting"
 brief: "The Columbus Idea Foundry approached me to help them reach their target audience. The typical Idea Foundry member is someone who has an interest in making things, but doesn't have the tools to do so. After some discussion, we landed on the concept of using a puzzle to represent the &ldquo;missing pieces&rdquo; provided by the Foundry."
+homepage-brief: "A visual explanation of the Columbus Idea Foundry's core mission."
 background: "#D6D0BA"
+background-img: "https://dl.dropboxusercontent.com/u/21344830/Headers_MakePuzzle.jpg"
 ---
 
 <section class="wrapper post-section">

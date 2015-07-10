@@ -10,7 +10,9 @@ tags:
 - "Art Direction, "
 - "Visual Design"
 brief: "Working with the Foundry's leadership, our goal was to communicate the Foundry's capacity to empower individuals to create whatever they can imagine with the resources and communal knowledge available."
+homepage-brief: "Rebrand of one of the world's largest makerspaces from the ground up."
 background: "#3B83BE"
+background-img: "https://dl.dropboxusercontent.com/u/21344830/CIF-logoiterations_2015-07-09.png"
 text-color: "#EAF6FF"
 ---
 

@@ -10,8 +10,10 @@ tags:
 - "Visual Design, "
 - "Screen Printing"
 brief: "After receiving a grant from the Greater Columbus Arts Council and purchasing some screen printing gear, I got my hands dirty with a series of posters I designed to give a voice to the Maker Movement."
+homepage-brief: "Poster series &amp; personal project; my interpretation of the Maker Movement."
 background: "#ff2c1c"
 text-color: "#FFFFFF"
+background-img: "https://dl.dropboxusercontent.com/u/21344830/Headers_MAKE-Posters.jpg"
 ---
 
 <section class="wrapper post-section">
