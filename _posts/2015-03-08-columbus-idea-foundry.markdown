@@ -22,14 +22,14 @@ text-color: "#EAF6FF"
 </section>
 <section class="wrapper post-section">
 <h3 class="post-subhead">The Logo</h3>
-<p>Initial logo iterations focused on imagery analagous to tools, manufacturing, physics, and electricity.</p>
+<p>Initial logo iterations focused on imagery analogous to tools, manufacturing, physics, and electricity.</p>
 </section>
 
 <section class="post-section__container">
 	<div class="wrapper post-section">
 		<img src="/content/cif/CIF-logoiterations-2.jpg" alt="Refined drafts exploring the lightbulb." />
 		<p class="caption">Refined drafts exploring the lightbulb.</p>
-		<p>Departing further, we explored imagery analagous to ideas.</p>
+		<p>Departing further, we explored imagery analogous to ideas.</p>
 	</div>
 </section>
 

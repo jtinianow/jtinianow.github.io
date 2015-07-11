@@ -1,0 +1,119 @@
+---
+layout: post
+title:  "Seekr"
+client: "Seekr"
+date:   2015-07-10 00:00:00
+permalink: /seekr
+thumbnail: content/seekr/seekr-thumb.png
+categories: projects
+tags:
+- "Art Direction, "
+- "Visual Design, "
+- "Frontend Development"
+brief: ""
+homepage-brief: "Seekr bridges the gap between adventurous travelers &amp; independent local guides."
+background: "#ff2c1c"
+text-color: "#FFFFFF"
+background-img: "https://dl.dropboxusercontent.com/u/21344830/Headers_Seekr.jpg"
+---
+
+<section class="post-section">
+<img src="/content/seekr/seekr-logos__initial--sketches.png" alt="Initial Logo Sketchs." />
+<p class="caption">Initial logo sketches.</p>
+</section>
+<section class="wrapper post-section">
+<h3 class="post-subhead">The Logo</h3>
+<p>Body</p>
+</section>
+
+<!-- Logo -->
+
+<section class="post-section">
+	<img src="/content/seekr/seekr-logos__process.gif" alt="">
+</section>
+
+<section class="post-section">
+	<img src="/content/seekr/seekr-logos__lockups--v1.png" alt="">
+</section>
+
+<section class="post-section">
+	<img src="/content/seekr/seekr-logos__logo--v2.png" alt="">
+</section>
+
+<section class="post-section">
+	<img src="/content/seekr/seekr-logos__lockups--v2.png" alt="">
+</section>
+
+<!-- Color Studies -->
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-color-studies__sources.jpeg" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-color-studies__process.gif" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-color-studies__01.png" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-color-studies__02.png" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-color-studies__03.png" alt="">
+</section>
+
+<!-- Brand Materials -->
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-brandmat__bandana.png" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-brandmat__humans.png" alt="">
+</section>
+
+<!-- Atomic Design -->
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__atoms.png" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__molecules.png" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__organisms.png" alt="">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__panel--exp.png" alt="" style="border: 1px solid #eee;">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__panel--pro.png" alt="" style="border: 1px solid #eee;">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__panel--photos.png" alt="" style="border: 1px solid #eee;">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__panel--rev.png" alt="" style="border: 1px solid #eee;">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__panel--similar.png" alt="" style="border: 1px solid #eee;">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__grid.jpg" alt="" style="border: 1px solid #eee;">
+</section>
+
+<section class="wrapper post-section">
+	<img src="/content/seekr/seekr-ui__landing-page--draft.jpg" alt="" style="border: 1px solid #eee;">
+</section>
