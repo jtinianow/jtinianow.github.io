@@ -4,7 +4,7 @@ title:  "Columbus Idea Foundry Brand"
 client: "Columbus Idea Foundry"
 date:   2015-03-08 21:07:32
 permalink: /columbus-idea-foundry
-thumbnail: content/cif/CIF-thumb.jpg
+thumbnail: content/cif/CIF-thumb.png
 categories: projects
 tags:
 - "Art Direction, "
@@ -12,7 +12,7 @@ tags:
 brief: "Working with the Foundry's leadership, our goal was to communicate the Foundry's capacity to empower individuals to create whatever they can imagine with the resources and communal knowledge available."
 homepage-brief: "Rebrand of one of the world's largest makerspaces from the ground up."
 background: "#3B83BE"
-background-img: "https://dl.dropboxusercontent.com/u/21344830/CIF-logoiterations_2015-07-09.png"
+background-img: "/content/cif/CIF-hero--v2.png"
 text-color: "#EAF6FF"
 ---
 
