@@ -20,3 +20,91 @@
   background-repeat: repeat-x;
 }
 
+/* Type
+************************************************/
+
+// Maps
+$font-styles: (
+  serif: $base-font-family,
+  sans: $secondary-font-family
+);
+
+$font-sizes: (
+  x-small: 12px,
+  small: 16px,
+  medium: 21px,
+  large: 28px,
+  x-large: 64px
+);
+
+$colors: (
+  black: $text-color,
+  dark-grey: lighten($text-color, 10%),
+  grey: lighten($text-color, 30%),
+  light-grey: darken($background-color, 40%)
+);
+
+// Base Styles
+@mixin body--sans {
+  font-family: map-get($font-styles, sans);
+  font-size: map-get($font-sizes, medium);
+  color: map-get($colors, black);
+}
+
+@mixin body--serif {
+  font-family: map-get($font-styles, serif);
+  font-size: map-get($font-sizes, small);
+  color: map-get($colors, black);
+  @media (min-width: 768px) { font-size: map-get($font-sizes, medium); }
+}
+
+@mixin header-a--serif {
+  font-family: map-get($font-styles, serif);
+  font-size: map-get($font-sizes, large);
+  line-height: 1.2;
+  @media (min-width: 768px) { font-size: map-get($font-sizes, x-large); }
+}
+
+@mixin subhead-a--serif {
+  font-family: map-get($font-styles, serif);
+  font-size: map-get($font-sizes, medium);
+  line-height: 1.35;
+  font-weight: 400;
+  @media (min-width: 768px) { font-size: map-get($font-sizes, large); }
+}
+
+@mixin subhead-c--serif {
+  font-family: map-get($font-styles, serif);
+  font-size: map-get($font-sizes, small);
+  line-height: 1.45;  
+}
+
+@mixin subhead-a--sans {
+  font-family: map-get($font-styles, sans);
+  font-size: map-get($font-sizes, x-small);
+  line-height: 1.25;
+  @media (min-width:768px) { font-size: map-get($font-sizes, small); }
+}
+
+@mixin subhead-b--sans {
+  font-family: map-get($font-styles, sans);
+  font-size: map-get($font-sizes, small);
+  line-height: 1.25;
+  color: map-get($colors, dark-grey);
+}
+
+@mixin subhead-c--sans {
+  font-family: map-get($font-styles, sans);
+  font-size: map-get($font-sizes, x-small);
+  line-height: 1.25;
+  color: map-get($colors, light-grey);
+}
+
+
+// Modifiers
+@mixin caps {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
