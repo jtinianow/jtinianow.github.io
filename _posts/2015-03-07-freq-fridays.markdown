@@ -9,9 +9,9 @@ categories: projects
 tags:
 - "Visual Design"
 brief: "Arts and education non-profit the Fuse Factory contracted with me to create a set of print promotions for the 2013&ndash;2014 season of their music &amp; tech event series <em>Frequency Fridays</em>. The series showcases artists who make music with technology intended for other uses."
-homepage-brief: "Visual identity &amp; print promotions for 2013&ndash;2014 season of local music &amp; tech event."
+homepage-brief: "Visual identity &amp; promotions for 2013&ndash;2014 season of local music &amp; tech event."
 background: "#DDEF81"
-background-img: "https://dl.dropboxusercontent.com/u/21344830/Headers_FF_2015-07-10.jpg"
+background-img: "/content/freq-fridays/freq-fri-hero.jpg"
 ---
 
 <section class="wrapper post-section">

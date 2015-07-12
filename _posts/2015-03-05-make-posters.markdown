@@ -13,7 +13,7 @@ brief: "After receiving a grant from the Greater Columbus Arts Council and purch
 homepage-brief: "Poster series &amp; personal project; my interpretation of the Maker Movement."
 background: "#ff2c1c"
 text-color: "#FFFFFF"
-background-img: "https://dl.dropboxusercontent.com/u/21344830/Headers_MAKE-Posters.jpg"
+background-img: "/content/make-posters/make-posters-hero.jpg"
 ---
 
 <section class="wrapper post-section">

@@ -11,10 +11,10 @@ tags:
 - "Visual Design, "
 - "Frontend Development"
 brief: "Seekr was born out of a desire to make it easier for travelers to have authentic experiences, provided by knowledgeable locals. In the spring of 2015, I teamed up with Nick Clement (CEO), Alia Munger (UX Lead), Catie Czajkowski (Product Manager), and Danny Tran (Lead Developer) to create an experience-driven platform for adventurous travelers."
-homepage-brief: "Seekr bridges the gap between adventurous travelers &amp; independent local guides."
+homepage-brief: "Seekr bridges the gap between adventurous travelers &amp; local guides."
 background: "#ff2c1c"
 text-color: "#FFFFFF"
-background-img: "https://dl.dropboxusercontent.com/u/21344830/Headers_Seekr.jpg"
+background-img: "/content/seekr/seekr-hero.jpg"
 ---
 
 <section class="wrapper post-section">
