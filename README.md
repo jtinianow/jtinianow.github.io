@@ -17,7 +17,6 @@ Features | Tools Used
 **JavaScript** | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/)
 **HTML** | [Pug](https://pugjs.org/api/getting-started.html), [gulp-data](https://github.com/colynb/gulp-data), or bring your own
 **Images** | Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin)
-**Icons** | Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) and/or [Icon Fonts](https://www.npmjs.com/package/gulp-iconfont)
 **Fonts** | Folder and `.sass` mixin for including WebFonts
 **Live Updating** | [BrowserSync](http://www.browsersync.io/), [Webpack Dev Middleware](https://github.com/webpack/webpack-dev-middleware), [Webpack Hot Middleware](https://github.com/glenjamin/webpack-hot-middleware)
 **Production Builds** | JS and CSS are [uglified](https://github.com/terinjokes/gulp-uglify) and [minified](http://cssnano.co/), [filename md5 hashing (reving)](https://github.com/sindresorhus/gulp-rev), [file size reporting](https://github.com/jaysalvat/gulp-sizereport), local production [Express](http://expressjs.com/) server for testing builds.
@@ -109,7 +108,6 @@ A `README.md` with details about each asset task are available in their respecti
 - [HTML](src/html)
 - [Fonts](src/fonts)
 - [Images](src/images)
-- [Icon Font](src/icons#iconfont-task)
 - [SVG Sprite](src/icons#svg-sprite-task)
 - [Static Files (favicons, app icons, etc.)](src/static)
 
@@ -147,24 +145,10 @@ GitHub Pages isn't the most robust of hosting solutions (you'll eventually run i
 
 For non-static sites (Rails, Craft, etc.), make sure the `production` task runs as part of your deploy process.
 
-## Notable changes from 1.0
-- Full asset pipeline and static html compilation
-- `gulpfile.js` is now a directory
-- update directory structure
-- Replaced Browserify with [Webpack](http://webpack.github.io/docs/webpack-for-browserify-users.html)!
-  - Async CommonJS module requires
-  - Automatically splits out shared dependencies
-- New `html` task w/ Nunjucks templating/compiling
-- Replace CoffeeScript with ES6 ([Babel.js](http://babeljs.io/))
-- New `server` task to test production files locally
-- New `deploy` task to deploy the public directory to gh-pages
-- New `rev` task that revisions filenames and compress css and js
-- Use `gulp-watch` instead of `gulp.watch` (correctly handles new files)
-- New `production` task runs tests, compression + filename revisioning
-- Remove old examples and extraneous dependencies
-- Upgrades dependencies
-- Added example Travis CI integration that runs karma tests and production build
-- Add SVG sprite implementation from @synapticism in #100
+## Notable changes from [Gulp Starter](https://github.com/vigetlabs/gulp-starter)
+- New `html` task w/ Pug templating/compiling
+- Removed `iconFont` tasks (Why? [Seriously, Don’t Use Icon Fonts](https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/))
+- Removed `macros` since they are not used in Pug
 
 Original Blog Post: https://www.viget.com/articles/gulp-browserify-starter-faq
 
