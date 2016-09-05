@@ -8,7 +8,7 @@ var gulpif       = require('gulp-if')
 var handleErrors = require('../lib/handleErrors')
 var htmlmin      = require('gulp-htmlmin')
 var path         = require('path')
-var render       = require('gulp-nunjucks-render')
+var render       = require('gulp-pug')
 var fs           = require('fs')
 
 var exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**')
