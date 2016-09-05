@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title= pageTitle
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="stylesheets/app.css")
+		block head
+	body
+		block content
+		block javascript
+			script(src="javascripts/app.js")
