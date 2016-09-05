@@ -15,7 +15,7 @@ Features | Tools Used
 ------ | -----
 **CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps
 **JavaScript** | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/)
-**HTML** | [Nunjucks](https://mozilla.github.io/nunjucks/), [gulp-data](https://github.com/colynb/gulp-data), or bring your own
+**HTML** | [Pug](https://pugjs.org/api/getting-started.html), [gulp-data](https://github.com/colynb/gulp-data), or bring your own
 **Images** | Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin)
 **Icons** | Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) and/or [Icon Fonts](https://www.npmjs.com/package/gulp-iconfont)
 **Fonts** | Folder and `.sass` mixin for including WebFonts
@@ -25,7 +25,7 @@ Features | Tools Used
 **Deployment** | Quickly deploy `public` folder to gh-pages with [`gulp-gh-pages`](https://github.com/shinnn/gulp-gh-pages)
 
 ## Usage
-Make sure Node installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions. 
+Make sure Node installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions.
 
 This has been tested on Node `0.12.x` - `5.9.0`, and should work on newer versions as well. [File an issue](https://github.com/vigetlabs/gulp-starter/issues) if it doesn't!
 
