@@ -3,6 +3,10 @@
 	text-align: right;
 }
 
+.contact-anchor { color: $blue; }
+
+.contact-anchor:after { display: none; }
+
 .contact-details {
 	margin: 0;
 	line-height: 1.5;

@@ -15,14 +15,13 @@
 
 .site-title {
 	max-width: 11em;
-	font-size: 1.5em;
-
-	@supports (display: flex) {
-		align-self: center;
-	}
+	font-size: 8vw;
 }
 
-.details-title { font-size: 1em; }
+.details-title {
+	font-size: 1em;
+	color: $blue;
+}
 
 .details-title,
 .detail-list {
