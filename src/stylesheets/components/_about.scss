@@ -22,7 +22,12 @@
 }
 
 .site-title {
+	max-width: 11em;
 	font-size: 1.5em;
+
+	@supports (display: flex) {
+		align-self: center;
+	}
 }
 
 .details-title {
