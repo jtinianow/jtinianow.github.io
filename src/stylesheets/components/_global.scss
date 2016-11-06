@@ -12,3 +12,23 @@ ul {
 	padding-left: 0;
 	list-style: none;
 }
+
+.header-primary,
+.content {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.header-primary {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 1em;
+}
+
+.content {
+	padding-bottom: 1em;
+	height: 100vh;
+	background-color: $off-white;
+}

@@ -1,3 +1,21 @@
+.about {
+	position: relative;
+	height: 100%;
+
+	@supports (display: flex) {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+	}
+}
+
+.details {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translate(0, -100%);
+}
+
 .site-title,
 .details-title {
 	font-weight: normal;
