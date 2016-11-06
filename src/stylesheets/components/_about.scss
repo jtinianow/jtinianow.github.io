@@ -16,6 +16,11 @@
 .site-title {
 	max-width: 11em;
 	font-size: 8vw;
+
+	@media screen and (min-width: 900px) {
+		font-size: 4.5em;
+		align-self: center;
+	}
 }
 
 .details-title {
