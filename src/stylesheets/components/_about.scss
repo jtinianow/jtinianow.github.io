@@ -1,19 +1,11 @@
 .about {
 	position: relative;
-	height: 100%;
 
 	@supports (display: flex) {
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
 	}
-}
-
-.details {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	transform: translate(0, -100%);
 }
 
 .site-title,
@@ -30,6 +22,10 @@
 	}
 }
 
-.details-title {
-	font-size: 1em;
+.details-title { font-size: 1em; }
+
+.details-title,
+.detail-list {
+	margin: 0;
+	line-height: 1.5;
 }
