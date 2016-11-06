@@ -1,4 +1,13 @@
 extends layouts/application.pug
 
 block content
-	h1(data-module="example") Hello World
+	header.header-primary
+		a.contact-link(href="#") Contact
+	main.content
+		h1.site-title Jeremy Tinianow is a Designer & Maker who Writes Code & Copy
+		section.details
+			h2.details-title Currently
+			ul.detail-list
+				li.detail-item Designer at 
+					a.detail-link(href="#", target="_blank") Barbershop
+				li.detail-item Based in sunny Denver, CO
