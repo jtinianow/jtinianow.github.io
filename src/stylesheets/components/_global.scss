@@ -39,14 +39,10 @@ ul {
 
 .content {
 	position: relative;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
 	height: 100vh;
 	min-height: 360px;
-	text-align: center;
 	background-color: $off-white;
-
-	@supports (display: flex) {
-		display: flex;
-		flex-flow: column;
-		justify-content: space-between;
-	}
 }

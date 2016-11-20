@@ -1,15 +1,8 @@
 .about {
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-
-	@supports (display: flex) {
-		display: flex;
-		flex-flow: column;
-		justify-content: center;
-	}
+	position: relative;
+	display: inline-flex;
+	flex-flow: row;
+	justify-content: center;
 }
 
 .site-title,
@@ -18,12 +11,10 @@
 }
 
 .site-title {
-	display: inline-block;
 	max-width: 11em;
 	font-size: 8vw;
 	font-weight: 500;
 	line-height: 1;
-	text-align: left;
 
 	@media screen and (min-width: 900px) {
 		font-size: 4.5em;
@@ -32,10 +23,6 @@
 }
 
 .details {
-	position: absolute;
-	bottom: 1em;
-	left: 1em;
-	text-align: left;
 	font-weight: 500;
 }
 
