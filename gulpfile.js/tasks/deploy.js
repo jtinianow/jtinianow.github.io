@@ -10,6 +10,7 @@ var settings = {
   url: package.homepage,
   src: path.join(config.root.dest, '/**/*'),
   ghPages: {
+		branch: 'master',
     cacheDir: path.join(os.tmpdir(), package.name)
   }
 }
