@@ -1,0 +1,831 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background-color: black;
+  font: 18px Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+h1 {
+  margin-bottom: 1em; }
+
+p {
+  margin: 0 0 1em 0; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+a:hover {
+  color: inherit;
+  text-decoration: none; }
+
+a:visited {
+  color: inherit;
+  text-decoration: none; }
+
+ul, ol {
+  list-style: none; }
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+body {
+  color: blue;
+  font-family: "garamond-premier-pro", Georgia, Times, serif;
+  font-size: 16.8px;
+  line-height: 150%;
+  color: #444;
+  background: #FDFDFD;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility; }
+  @media (min-width: 768px) {
+    body {
+      font-size: 21px; } }
+
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6, .wf-loading ul, .wf-loading ol, .wf-loading p, .wf-loading span, .wf-loading a {
+  visibility: hidden; }
+
+.wf-inactive body {
+  font-size: 15.75px; }
+  .wf-inactive body .about__text {
+    font-size: 25.2px;
+    line-height: 150%; }
+  @media (min-width: 768px) {
+    .wf-inactive body {
+      font-size: 21px; } }
+
+.wrapper {
+  margin: 0 1rem;
+  *zoom: 1; }
+  .wrapper:before, .wrapper:after {
+    content: '';
+    display: table; }
+  .wrapper:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    .wrapper {
+      margin: 0 4rem; } }
+  @media (min-width: 1280px) {
+    .wrapper {
+      max-width: 65rem;
+      margin: 0 auto; } }
+
+.site-header__container {
+  position: fixed;
+  top: 1rem;
+  right: 0;
+  left: 0;
+  z-index: 998; }
+
+.site-header__title-link, .nav-primary__menu-toggle {
+  float: left;
+  clear: none;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: 0%; }
+
+.site-header__title-link--center, .site-header__title-link--center--mobile {
+  float: left;
+  clear: none;
+  width: 60%;
+  margin-left: 0%;
+  margin-right: 0%;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.4;
+  text-align: center;
+  transition: opacity 0.3s ease; }
+  @media (min-width: 768px) { }
+  @media (min-width: 768px) {
+    .site-header__title-link--center:hover, .site-header__title-link--center--mobile:hover {
+      opacity: 1; } }
+
+.site-header__title-link--center {
+  display: none; }
+  @media (min-width: 768px) {
+    .site-header__title-link--center {
+      display: block; } }
+
+@media (min-width: 768px) {
+  .site-header__title-link--center--mobile {
+    display: none; } }
+
+.hidden {
+  visibility: hidden; }
+
+.site-footer__container {
+  padding: 1rem 0;
+  background: #e4e4e4; }
+
+.site-footer {
+  text-align: center;
+  color: #777777; }
+  @media (min-width: 768px) {
+    .site-footer {
+      text-align: left; } }
+
+.site-footer__link {
+  text-decoration: underline; }
+
+@media (min-width: 768px) {
+  .site-footer__info, .site-footer__contact {
+    float: left;
+    clear: none;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: 0%; } }
+
+.site-footer__info {
+  font-size: 0.8em;
+  line-height: 125%; }
+
+.nav-primary__menu-toggle svg {
+  float: right; }
+
+.nav-primary__menu-toggle:hover {
+  cursor: pointer; }
+
+.nav-primary__container {
+  display: none; }
+
+.nav-primary__container--visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FDFDFD;
+  z-index: 997; }
+
+.nav-primary, .nav-primary__menu {
+  margin-top: 2rem; }
+
+.nav-primary__menu-col {
+  float: left;
+  clear: none;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  float: right; }
+  .nav-primary__menu-col:last-child {
+    margin-right: 0%; }
+  @media (min-width: 768px) {
+    .nav-primary__menu-col {
+      float: left;
+      clear: none;
+      width: 22.75%;
+      margin-left: 0%;
+      margin-right: 3%;
+      float: right; }
+      .nav-primary__menu-col:last-child {
+        margin-right: 0%; } }
+
+@media (min-width: 800px) {
+  .nav-primary {
+    margin-right: 3rem; } }
+
+.menu-col__list {
+  list-style: none; }
+
+.menu-col__item {
+  width: 100%; }
+
+.menu-link {
+  display: inline-block;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 125%;
+  padding: 0.5rem;
+  transition: all 0.3s ease; }
+  @media (min-width: 768px) { }
+  @media (min-width: 800px) {
+    .menu-link {
+      padding: 0.5rem 1rem; } }
+
+.menu-link--page {
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0; }
+
+@media (min-width: 800px) {
+  .menu-link:hover {
+    background: #00aef1;
+    color: #fff; } }
+
+.menu-link--page--inactive:hover {
+  background: transparent;
+  color: inherit; }
+
+.page-content {
+  margin-bottom: 8rem; }
+
+.post {
+  margin-bottom: 4rem; }
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem; }
+
+.post-section {
+  margin-bottom: 4rem; }
+
+.omega {
+  margin-bottom: 8rem; }
+
+.post-brief p, .post-nav__links {
+  max-width: 40rem; }
+
+.post-nav__links {
+  margin: 0 auto; }
+
+.post-section {
+  margin-top: 2rem; }
+  .post-section h1, .post-section h2, .post-section h3, .post-section h4, .post-section h5, .post-section h6, .post-section p {
+    max-width: 40rem;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  .post-section img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+
+.post-header__container {
+  background: #FDFDFD; }
+
+.post-header {
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6rem 0 10rem 0; }
+  @media (min-width: 768px) { }
+  @media (min-width: 768px) {
+    .post-header {
+      padding-bottom: 20rem; } }
+
+.post-header__title {
+  font-family: "garamond-premier-pro", Georgia, Times, serif;
+  font-size: 4em;
+  text-transform: none;
+  margin-bottom: 6rem;
+  line-height: 110%; }
+
+.post-brief {
+  margin-bottom: 6rem; }
+  @media (min-width: 768px) {
+    .post-brief {
+      margin-bottom: 4rem;
+      *zoom: 1; }
+      .post-brief:before, .post-brief:after {
+        content: '';
+        display: table; }
+      .post-brief:after {
+        clear: both; } }
+
+.post-brief__header, .post-header__label {
+  letter-spacing: 2px;
+  font-weight: 300; }
+  @media (min-width: 768px) {
+    .post-brief__header, .post-header__label {
+      float: left;
+      clear: none;
+      width: 20%;
+      margin-left: 0%;
+      margin-right: 0%; } }
+
+.post-brief__description, .post-header__tags {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.1em;
+  line-height: 140%; }
+  @media (min-width: 768px) {
+    .post-brief__description, .post-header__tags {
+      float: left;
+      clear: none;
+      width: 60%;
+      margin-left: 0%;
+      margin-right: 0%; } }
+
+.post-header__details {
+  margin-bottom: 0; }
+
+.caption {
+  font-size: 80%;
+  line-height: 120%;
+  font-style: italic;
+  color: #aaaaaa;
+  text-align: center; }
+
+.post-link {
+  text-decoration: underline; }
+
+.post-subhead {
+  margin: 2rem 0 1rem 0;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ea2e49; }
+  @media (min-width: 768px) { }
+
+.post-nav__links {
+  line-height: 2; }
+
+.post-nav__link {
+  float: left;
+  margin: 0 5%;
+  vertical-align: baseline;
+  width: 5%; }
+
+.post-nav__link--prev {
+  margin-left: 0; }
+
+.post-nav__link--next {
+  margin-right: 0; }
+
+.post-nav__archive {
+  width: 70%;
+  text-align: center; }
+
+.post-nav__link--prev svg {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  transition-duration: 0.3s; }
+
+.post-nav__link--next svg {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  transition-duration: 0.3s; }
+
+.post-nav__link--prev:hover svg {
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+  transition-duration: 0.3s; }
+
+.post-nav__link--next:hover svg {
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
+  transition-duration: 0.3s; }
+
+.home-page, .resume {
+  padding-top: 6rem; }
+
+.post-previews {
+  list-style: none; }
+
+.post-preview__list {
+  display: block; }
+  @media (min-width: 600px) {
+    .post-preview__list {
+      float: left;
+      clear: none;
+      width: 50%;
+      margin-left: 0%;
+      margin-right: 0%; } }
+  @media (min-width: 900px) {
+    .post-preview__list {
+      float: left;
+      clear: none;
+      width: 25%;
+      margin-left: 0%;
+      margin-right: 0%; } }
+
+.post-preview__thumb {
+  max-width: 100%;
+  height: auto; }
+
+.about__container, .about__intro {
+  margin-bottom: 4rem; }
+  @media (min-width: 768px) {
+    .about__container, .about__intro {
+      margin-bottom: 8rem; } }
+
+.about__container {
+  display: inline-block;
+  margin-bottom: 0; }
+
+@media (min-width: 768px) {
+  .about__intro {
+    float: left;
+    clear: none;
+    width: 56.25%;
+    margin-left: 0%;
+    margin-right: 0%; } }
+
+.about__text {
+  font-size: 1.5em;
+  line-height: 130%;
+  color: #515151; }
+
+@media (min-width: 768px) {
+  .about__highlights {
+    float: left;
+    clear: none;
+    width: 37.5%;
+    margin-left: 0%;
+    margin-right: 0%;
+    position: relative;
+    left: 6.4375%; } }
+
+.about__label {
+  margin-bottom: 1rem;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00aef1; }
+  @media (min-width: 768px) { }
+
+.about__contact-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #00aef1;
+  transition: background 0.3s ease; }
+  @media (min-width: 768px) { }
+
+@media (min-width: 800px) {
+  .about__contact-link:hover {
+    background: #beeeff; } }
+
+.highlight__container--col {
+  float: left;
+  clear: none;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%; }
+  .highlight__container--col:last-child {
+    margin-right: 0%; }
+  @media (min-width: 768px) {
+    .highlight__container--col {
+      float: left;
+      clear: none;
+      width: 48.5%;
+      margin-left: 0%;
+      margin-right: 3%; }
+      .highlight__container--col:last-child {
+        margin-right: 0%; } }
+
+.highlight__header {
+  margin-bottom: 0.5rem;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00aef1; }
+  @media (min-width: 768px) { }
+  @media (min-width: 768px) {
+    .highlight__header {
+      margin-bottom: 1rem; } }
+
+.highlight__container {
+  margin-bottom: 2rem; }
+
+.highlight__details {
+  margin-bottom: 0.66667rem; }
+
+.highlight__list {
+  font-size: 0.8em; }
+
+.highlight__item {
+  font-size: 1em;
+  line-height: 135%; }
+
+.highlight__item a {
+  transition: background 0.3s ease; }
+
+@media (min-width: 800px) {
+  .highlight__item a:hover {
+    background: #dedede; } }
+
+.highlight__subhead {
+  font-weight: 300; }
+
+.highlight__snippet {
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.675em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  @media (min-width: 768px) { }
+
+.highlight__snippet--sub {
+  font-size: 0.8em;
+  line-height: 150%;
+  text-transform: none;
+  letter-spacing: 0; }
+
+.post-previews__header {
+  margin-bottom: 2rem;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00aef1; }
+  @media (min-width: 768px) { }
+
+.post-preview__list {
+  position: relative;
+  line-height: 0;
+  background: #FDFDFD; }
+
+.post-previews__container {
+  padding-top: 6rem; }
+
+.post-preview__container {
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.post-preview__thumb {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1); }
+
+.post-preview__link {
+  display: inline-block;
+  width: 100%; }
+
+@media (min-width: 768px) {
+  .post-preview__link:hover .post-preview__info, .post-preview__link:hover .post-preview__thumb {
+    transition: opacity 0.3s ease; }
+  .post-preview__link:hover .post-preview__info {
+    opacity: 1; }
+  .post-preview__link:hover .post-preview__thumb {
+    opacity: 0.1; } }
+
+.post-preview__info {
+  opacity: 0;
+  margin: 1rem;
+  text-align: center;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 120%; }
+  @media (min-width: 768px) { }
+
+.post-preview__client, .post-preview__title {
+  margin-bottom: 0.5rem; }
+
+.post-preview__title {
+  color: #00aef1;
+  letter-spacing: 1px; }
+
+.post-preview__client {
+  text-transform: none;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #5e5e5e; }
+
+.resume {
+  line-height: 1.45;
+  max-width: 32rem; }
+  @media (min-width: 960px) {
+    .resume {
+      margin: 0 auto; } }
+
+.resume__download-link, .resume__download-link:visited {
+  display: inline-block;
+  margin-bottom: 2rem;
+  border: 2px solid #00aef1;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  vertical-align: baseline;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 1px;
+  color: #00aef1;
+  transition: background 0.3s ease; }
+  @media (min-width: 768px) { }
+
+.resume__download-link:hover {
+  background-color: #e7f9ff; }
+
+.resume-section__container {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 3.5rem; }
+
+.resume__header, .resume__subhead {
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  @media (min-width: 768px) { }
+
+.resume__header {
+  margin-bottom: 0;
+  color: #ea2e49; }
+
+.resume__info, .resume__contact {
+  float: left;
+  clear: none;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%; }
+
+.resume__contact {
+  text-align: right;
+  font-size: 0.8em; }
+
+.resume-section__header {
+  margin-bottom: 1rem;
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ea2e49; }
+  @media (min-width: 768px) { }
+
+.resume__list-secondary {
+  margin-bottom: 1.33333rem; }
+
+.resume__list-secondary__item {
+  font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  @media (min-width: 768px) { }
+
+.resume__item--em {
+  font-size: 0.7em; }
+
+.resume__text {
+  font-family: "garamond-premier-pro", Georgia, Times, serif;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 300; }
