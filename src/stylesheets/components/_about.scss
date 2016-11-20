@@ -1,5 +1,9 @@
 .about {
-	position: relative;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
 	@supports (display: flex) {
 		display: flex;
@@ -28,6 +32,9 @@
 }
 
 .details {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
 	text-align: left;
 	font-weight: 500;
 }

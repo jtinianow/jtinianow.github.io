@@ -33,7 +33,7 @@
       "src": "stylesheets",
       "dest": "stylesheets",
       "autoprefixer": {
-        "browsers": ["last 3 version"]
+        "browsers": ["last 4 version"]
       },
       "sass": {
         "indentedSyntax": true,
