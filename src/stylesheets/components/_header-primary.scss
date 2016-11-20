@@ -3,13 +3,17 @@
 	text-align: right;
 }
 
-.contact-anchor { color: $blue; }
+.contact-anchor {
+	font-weight: 500;
+	color: $blue;
+}
 
 .contact-anchor:after { display: none; }
 
 .contact-details {
 	margin: 0;
 	line-height: 1.5;
+	font-weight: 500;
 	transform: translate(0, 100%);
 	opacity: 0;
 	visibility: hidden;

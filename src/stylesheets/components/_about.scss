@@ -14,9 +14,12 @@
 }
 
 .site-title {
+	display: inline-block;
 	max-width: 11em;
 	font-size: 8vw;
+	font-weight: 500;
 	line-height: 1;
+	text-align: left;
 
 	@media screen and (min-width: 900px) {
 		font-size: 4.5em;
@@ -24,8 +27,14 @@
 	}
 }
 
+.details {
+	text-align: left;
+	font-weight: 500;
+}
+
 .details-title {
 	font-size: 1em;
+	font-weight: 500;
 	color: $blue;
 }
 
